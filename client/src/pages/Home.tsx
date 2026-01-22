@@ -127,7 +127,7 @@ export default function Home() {
       <AboutSection />
 
       {/* PROJECTS SECTION */}
-      <section id="projects" className="py-24 relative overflow-hidden">
+      <section id="projects" className="py-24 relative overflow-hidden bg-[#0B0D12]">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -135,19 +135,19 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <span className="text-primary font-display text-3xl mb-2 block">My Work</span>
-            <h2 className="text-4xl md:text-5xl font-bold">Featured Projects</h2>
+            <span className="text-[#0D21A1] font-allura text-3xl mb-2 block">My Work</span>
+            <h2 className="text-4xl md:text-5xl font-bold text-white font-sans">Featured Projects</h2>
           </motion.div>
 
           {projectsLoading ? (
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[1, 2, 3].map((i) => (
-                <div key={i} className="h-[400px] bg-card/50 rounded-2xl animate-pulse" />
+              {[1, 2, 3, 4, 5, 6].map((i) => (
+                <div key={i} className="h-[450px] bg-[#1A1D26] rounded-2xl animate-pulse" />
               ))}
             </div>
           ) : (
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {projects?.map((project, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {projects?.slice(0, 6).map((project, index) => (
                 <ProjectCard key={project.id} project={project} index={index} />
               ))}
             </div>

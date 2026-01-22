@@ -84,6 +84,30 @@ async function seedDatabase() {
       projectUrl: "#",
       tags: ["Framer Motion", "React", "Design System"]
     });
+
+    await storage.createProject({
+      title: "Task Management App",
+      description: "A collaborative task management tool with drag-and-drop functionality and team workspace features.",
+      imageUrl: "https://images.unsplash.com/photo-1540350394557-8d14678e7f91?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      projectUrl: "#",
+      tags: ["Next.js", "Prisma", "PostgreSQL", "Dnd-kit"]
+    });
+
+    await storage.createProject({
+      title: "Fitness Tracker Pro",
+      description: "Mobile-first web application for tracking workouts, nutrition, and personal health milestones.",
+      imageUrl: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      projectUrl: "#",
+      tags: ["PWA", "Firebase", "Redux", "Material UI"]
+    });
+
+    await storage.createProject({
+      title: "Cloud Storage Solution",
+      description: "Secure and scalable cloud storage platform with end-to-end encryption and file sharing capabilities.",
+      imageUrl: "https://images.unsplash.com/photo-1544396821-4dd40b938ad3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      projectUrl: "#",
+      tags: ["AWS S3", "Express", "Crypto", "Docker"]
+    });
   }
 
   const existingSkills = await storage.getSkills();
