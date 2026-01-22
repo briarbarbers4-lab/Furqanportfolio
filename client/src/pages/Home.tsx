@@ -2,12 +2,59 @@ import { useEffect } from "react";
 import { Link as ScrollLink } from "react-scroll";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowDown, Github, Linkedin, Twitter, Code2, Database, Layout } from "lucide-react";
+import { SiLinkedin, SiGithub, SiTwitter } from "react-icons/si";
 import { Navigation } from "@/components/Navigation";
 import { ProjectCard } from "@/components/ProjectCard";
 import { ContactForm } from "@/components/ContactForm";
 import { useProjects } from "@/hooks/use-projects";
 import { useSkills } from "@/hooks/use-skills";
 import { Button } from "@/components/ui/button";
+
+const AboutSection = () => {
+  return (
+    <section id="about" className="py-24 bg-[#F7F8FC]">
+      <div className="container mx-auto px-6">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="flex flex-col md:flex-row items-center gap-12"
+        >
+          <div className="w-full md:w-1/2 flex justify-center">
+            <div className="relative">
+              <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden shadow-xl border-4 border-white">
+                <img 
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                  alt="Profile" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 flex gap-4 bg-white px-6 py-3 rounded-full shadow-lg">
+                <a href="#" className="text-[#0D21A1] hover:scale-110 transition-transform"><SiLinkedin size={20} /></a>
+                <a href="#" className="text-[#0D21A1] hover:scale-110 transition-transform"><SiGithub size={20} /></a>
+                <a href="#" className="text-[#0D21A1] hover:scale-110 transition-transform"><SiTwitter size={20} /></a>
+              </div>
+            </div>
+          </div>
+          
+          <div className="w-full md:w-1/2">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#0B0D12] mb-2 font-sans">About Me</h2>
+            <h3 className="text-3xl font-bold text-[#0D21A1] mb-6 font-allura">Creative Developer</h3>
+            <div className="space-y-4 text-gray-700 font-inter text-lg">
+              <p>
+                Hello! I'm a passionate developer with a deep love for creating beautiful, functional, and user-centric digital experiences. With a background in both design and engineering, I bridge the gap between aesthetics and functionality.
+              </p>
+              <p>
+                My approach is driven by curiosity and a commitment to excellence. Whether I'm crafting complex backend systems or fine-tuning frontend animations, I strive for clean code and meaningful interactions that leave a lasting impression.
+              </p>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+};
 
 export default function Home() {
   const { data: projects, isLoading: projectsLoading } = useProjects();
@@ -77,7 +124,7 @@ export default function Home() {
       </section>
 
       {/* ABOUT SECTION */}
-      <section id="about" className="py-24 bg-card/30 relative">
+      <AboutSection />
         <div className="container mx-auto px-6">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
