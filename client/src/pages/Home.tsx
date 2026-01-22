@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
-import { ArrowDown, Github, Linkedin, Twitter, Code2, Database, Layout, Mail, Phone, MapPin, ArrowUp } from "lucide-react";
-import { SiLinkedin, SiGithub, SiX } from "react-icons/si";
+import { ArrowDown, Linkedin, Instagram, Code2, Database, Layout, Mail, Phone, MapPin, ArrowUp } from "lucide-react";
+import { SiLinkedin, SiInstagram } from "react-icons/si";
 import { Navigation } from "@/components/Navigation";
 import { ProjectCard } from "@/components/ProjectCard";
 import { ContactForm } from "@/components/ContactForm";
@@ -31,9 +31,8 @@ const AboutSection = () => {
                 />
               </div>
               <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 flex gap-4 bg-white px-6 py-3 rounded-full shadow-lg">
-                <a href="#" className="text-[#0D21A1] hover:scale-110 transition-transform"><SiLinkedin size={20} /></a>
-                <a href="#" className="text-[#0D21A1] hover:scale-110 transition-transform"><SiGithub size={20} /></a>
-                <a href="#" className="text-[#0D21A1] hover:scale-110 transition-transform"><SiX size={20} /></a>
+                <a href="https://www.linkedin.com/in/muhammad-furqan-shahid-13a051363/" className="text-[#0D21A1] hover:scale-110 transition-transform"><SiLinkedin size={20} /></a>
+                <a href="https://www.instagram.com/furqan.luminex/" className="text-[#0D21A1] hover:scale-110 transition-transform"><SiInstagram size={20} /></a>
               </div>
             </div>
           </div>
@@ -43,10 +42,10 @@ const AboutSection = () => {
             <h3 className="text-3xl font-bold text-[#0D21A1] mb-6 font-allura">Creative Developer</h3>
             <div className="space-y-4 text-gray-700 font-inter text-lg">
               <p>
-                Hello! I'm a passionate developer with a deep love for creating beautiful, functional, and user-centric digital experiences. With a background in both design and engineering, I bridge the gap between aesthetics and functionality.
+                 help coaches, consultants, saas founders and agency owners turn content into a scalable system that attracts leads, closes clients, and increases revenue across Instagram, LinkedIn, and YouTube.Most people think content success is about editing.It’s not.It’s about strategy, clarity, and execution at scale.Over the last 3+ years, I’ve worked as a senior video editor and motion designer, partnering with top influencers and business owners to generate millions of views and measurable results for their brands.
               </p>
               <p>
-                My approach is driven by curiosity and a commitment to excellence. Whether I'm crafting complex backend systems or fine-tuning frontend animations, I strive for clean code and meaningful interactions that leave a lasting impression.
+                I don’t just create content —I manage the entire system behind it.What working with me looks like:• End-to-end content management (ideation, scripting, editing)• High-retention short-form built for authority and reach• Strategic content designed to attract leads, not just attention• Consistent execution without you needing to micromanageThe objective is simple:Turn your content into an asset that compounds authority and drives revenue.Book a call if you want content that performs — not just posts that look good.
               </p>
             </div>
           </div>
@@ -120,9 +119,8 @@ export default function Home() {
             </div>
 
             <div className="flex justify-center gap-6 text-[#F7F8FC]/60">
-              <a href="#" className="hover:text-[#0D21A1] transition-colors transform hover:scale-110"><SiGithub size={24} /></a>
-              <a href="#" className="hover:text-[#0D21A1] transition-colors transform hover:scale-110"><SiLinkedin size={24} /></a>
-              <a href="#" className="hover:text-[#0D21A1] transition-colors transform hover:scale-110"><SiX size={24} /></a>
+              <a href="https://www.linkedin.com/in/muhammad-furqan-shahid-13a051363/" className="hover:text-[#0D21A1] transition-colors transform hover:scale-110"><SiLinkedin size={24} /></a>
+              <a href="https://www.instagram.com/furqan.luminex/" className="hover:text-[#0D21A1] transition-colors transform hover:scale-110"><SiInstagram size={24} /></a>
             </div>
           </motion.div>
         </motion.div>
@@ -281,9 +279,8 @@ export default function Home() {
               <div className="mt-12">
                 <p className="text-[#F7F8FC]/60 mb-6 font-inter italic">"Design is not just what it looks like and feels like. Design is how it works."</p>
                 <div className="flex gap-4">
-                  <a href="#" className="w-10 h-10 rounded-full bg-[#1A1D26] flex items-center justify-center text-[#F7F8FC]/60 hover:bg-[#0D21A1] hover:text-white transition-all"><SiLinkedin size={18} /></a>
-                  <a href="#" className="w-10 h-10 rounded-full bg-[#1A1D26] flex items-center justify-center text-[#F7F8FC]/60 hover:bg-[#0D21A1] hover:text-white transition-all"><SiGithub size={18} /></a>
-                  <a href="#" className="w-10 h-10 rounded-full bg-[#1A1D26] flex items-center justify-center text-[#F7F8FC]/60 hover:bg-[#0D21A1] hover:text-white transition-all"><SiX size={18} /></a>
+                  <a href="https://www.linkedin.com/in/muhammad-furqan-shahid-13a051363/" className="w-10 h-10 rounded-full bg-[#1A1D26] flex items-center justify-center text-[#F7F8FC]/60 hover:bg-[#0D21A1] hover:text-white transition-all"><SiLinkedin size={18} /></a>
+                  <a href="https://www.instagram.com/furqan.luminex/" className="w-10 h-10 rounded-full bg-[#1A1D26] flex items-center justify-center text-[#F7F8FC]/60 hover:bg-[#0D21A1] hover:text-white transition-all"><SiInstagram size={18} /></a>
                 </div>
               </div>
             </motion.div>
@@ -334,10 +331,8 @@ export default function Home() {
             <div className="space-y-6">
               <h4 className="text-lg font-bold text-white font-sans uppercase tracking-wider">Social</h4>
               <ul className="space-y-3">
-                <li><a href="#" className="text-[#F7F8FC]/60 hover:text-[#0D21A1] transition-colors font-inter">LinkedIn</a></li>
-                <li><a href="#" className="text-[#F7F8FC]/60 hover:text-[#0D21A1] transition-colors font-inter">GitHub</a></li>
-                <li><a href="#" className="text-[#F7F8FC]/60 hover:text-[#0D21A1] transition-colors font-inter">X (Twitter)</a></li>
-                <li><a href="#" className="text-[#F7F8FC]/60 hover:text-[#0D21A1] transition-colors font-inter">Dribbble</a></li>
+                <li><a href="https://www.linkedin.com/in/muhammad-furqan-shahid-13a051363/" className="text-[#F7F8FC]/60 hover:text-[#0D21A1] transition-colors font-inter">LinkedIn</a></li>
+                <li><a href="https://www.instagram.com/furqan.luminex/" className="text-[#F7F8FC]/60 hover:text-[#0D21A1] transition-colors font-inter">Instagram</a></li>
               </ul>
             </div>
           </div>
