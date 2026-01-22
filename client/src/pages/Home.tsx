@@ -1,7 +1,7 @@
-import { useEffect } from "react";
-import { Link as ScrollLink } from "react-scroll";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { ArrowDown, Github, Linkedin, Twitter, Code2, Database, Layout } from "lucide-react";
+import { useEffect, useState } from "react";
+import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
+import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
+import { ArrowDown, Github, Linkedin, Twitter, Code2, Database, Layout, Mail, Phone, MapPin, ArrowUp } from "lucide-react";
 import { SiLinkedin, SiGithub, SiX } from "react-icons/si";
 import { Navigation } from "@/components/Navigation";
 import { ProjectCard } from "@/components/ProjectCard";
@@ -60,19 +60,32 @@ export default function Home() {
   const { data: projects, isLoading: projectsLoading } = useProjects();
   const { data: skills, isLoading: skillsLoading } = useSkills();
   const { scrollY } = useScroll();
+  const [showBackToTop, setShowBackToTop] = useState(false);
   
   const heroY = useTransform(scrollY, [0, 500], [0, 200]);
   const heroOpacity = useTransform(scrollY, [0, 300], [1, 0]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowBackToTop(window.scrollY > 500);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    scroll.scrollToTop();
+  };
+
   return (
-    <div className="min-h-screen bg-[hsl(var(--bg-dark))] text-foreground font-sans selection:bg-primary selection:text-white overflow-hidden">
+    <div className="min-h-screen bg-[#0B0D12] text-[#F7F8FC] font-sans selection:bg-[#0D21A1] selection:text-white overflow-hidden">
       <Navigation />
 
       {/* HERO SECTION */}
       <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
         {/* Abstract Background Shapes */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          <div className="absolute -top-[20%] -right-[10%] w-[800px] h-[800px] rounded-full bg-primary/10 blur-[120px]" />
+          <div className="absolute -top-[20%] -right-[10%] w-[800px] h-[800px] rounded-full bg-[#0D21A1]/10 blur-[120px]" />
           <div className="absolute -bottom-[20%] -left-[10%] w-[600px] h-[600px] rounded-full bg-blue-600/5 blur-[100px]" />
         </div>
 
@@ -85,17 +98,17 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <span className="font-display text-4xl md:text-5xl text-primary block mb-4">Hello, I'm</span>
-            <h1 className="text-6xl md:text-8xl font-bold tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white to-white/60">
+            <span className="font-allura text-4xl md:text-5xl text-[#0D21A1] block mb-4">Hello, I'm</span>
+            <h1 className="text-6xl md:text-8xl font-bold tracking-tight mb-6 text-white font-sans">
               John Doe
             </h1>
-            <h2 className="text-2xl md:text-3xl text-muted-foreground font-light mb-8 max-w-2xl mx-auto">
+            <h2 className="text-2xl md:text-3xl text-[#F7F8FC]/60 font-light mb-8 max-w-2xl mx-auto font-inter">
               Creative Developer crafting digital experiences with code and passion.
             </h2>
             
             <div className="flex justify-center gap-4 mb-12">
               <ScrollLink to="projects" smooth={true} duration={800} offset={-100}>
-                <Button size="lg" className="rounded-full px-8 h-14 bg-primary text-white hover:bg-primary/90 shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transition-all hover:-translate-y-1">
+                <Button size="lg" className="rounded-full px-8 h-14 bg-[#0D21A1] text-white hover:bg-[#0D21A1]/90 shadow-lg shadow-[#0D21A1]/25 hover:shadow-xl hover:shadow-[#0D21A1]/30 transition-all hover:-translate-y-1">
                   View My Work
                 </Button>
               </ScrollLink>
@@ -106,10 +119,10 @@ export default function Home() {
               </ScrollLink>
             </div>
 
-            <div className="flex justify-center gap-6 text-muted-foreground">
-              <a href="#" className="hover:text-primary transition-colors transform hover:scale-110"><Github size={24} /></a>
-              <a href="#" className="hover:text-primary transition-colors transform hover:scale-110"><Linkedin size={24} /></a>
-              <a href="#" className="hover:text-primary transition-colors transform hover:scale-110"><Twitter size={24} /></a>
+            <div className="flex justify-center gap-6 text-[#F7F8FC]/60">
+              <a href="#" className="hover:text-[#0D21A1] transition-colors transform hover:scale-110"><SiGithub size={24} /></a>
+              <a href="#" className="hover:text-[#0D21A1] transition-colors transform hover:scale-110"><SiLinkedin size={24} /></a>
+              <a href="#" className="hover:text-[#0D21A1] transition-colors transform hover:scale-110"><SiX size={24} /></a>
             </div>
           </motion.div>
         </motion.div>
@@ -119,7 +132,7 @@ export default function Home() {
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
         >
-          <ArrowDown className="text-muted-foreground opacity-50" />
+          <ArrowDown className="text-[#F7F8FC]/40" />
         </motion.div>
       </section>
 
@@ -221,35 +234,56 @@ export default function Home() {
       </section>
 
       {/* CONTACT SECTION */}
-      <section id="contact" className="py-24 relative overflow-hidden">
-        <div className="absolute inset-0 bg-primary/5 -skew-y-3 transform origin-bottom-right" />
-        
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <section id="contact" className="py-24 bg-[#0B0D12] relative">
+        <div className="container mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-16 items-start">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
             >
-              <span className="text-primary font-display text-4xl mb-4 block">Let's Connect</span>
-              <h2 className="text-5xl md:text-6xl font-bold mb-6">Have a project in mind?</h2>
-              <p className="text-lg text-muted-foreground mb-8 max-w-lg">
-                I'm currently available for freelance projects and open to full-time opportunities. 
-                If you have an idea you want to bring to life, let's talk!
-              </p>
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-2 font-sans">Get In Touch</h2>
+              <h3 className="text-3xl font-bold text-[#0D21A1] mb-8 font-allura">Let's build something great</h3>
               
-              <div className="space-y-4">
-                <div className="flex items-center gap-4 text-muted-foreground hover:text-white transition-colors">
-                  <div className="w-10 h-10 rounded-full bg-card flex items-center justify-center border border-white/10">
-                    <Github size={20} />
+              <div className="space-y-8">
+                <div className="flex items-center gap-6 group">
+                  <div className="w-12 h-12 rounded-full bg-[#1A1D26] flex items-center justify-center text-[#0D21A1] border border-white/5 group-hover:bg-[#0D21A1] group-hover:text-white transition-all duration-300">
+                    <Mail size={24} />
                   </div>
-                  <span>github.com/johndoe</span>
+                  <div>
+                    <p className="text-[#F7F8FC]/40 text-sm font-inter">Email</p>
+                    <p className="text-white font-medium">hello@johndoe.com</p>
+                  </div>
                 </div>
-                <div className="flex items-center gap-4 text-muted-foreground hover:text-white transition-colors">
-                  <div className="w-10 h-10 rounded-full bg-card flex items-center justify-center border border-white/10">
-                    <Linkedin size={20} />
+                
+                <div className="flex items-center gap-6 group">
+                  <div className="w-12 h-12 rounded-full bg-[#1A1D26] flex items-center justify-center text-[#0D21A1] border border-white/5 group-hover:bg-[#0D21A1] group-hover:text-white transition-all duration-300">
+                    <Phone size={24} />
                   </div>
-                  <span>linkedin.com/in/johndoe</span>
+                  <div>
+                    <p className="text-[#F7F8FC]/40 text-sm font-inter">Phone</p>
+                    <p className="text-white font-medium">+1 (555) 123-4567</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-center gap-6 group">
+                  <div className="w-12 h-12 rounded-full bg-[#1A1D26] flex items-center justify-center text-[#0D21A1] border border-white/5 group-hover:bg-[#0D21A1] group-hover:text-white transition-all duration-300">
+                    <MapPin size={24} />
+                  </div>
+                  <div>
+                    <p className="text-[#F7F8FC]/40 text-sm font-inter">Location</p>
+                    <p className="text-white font-medium">San Francisco, CA</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-12">
+                <p className="text-[#F7F8FC]/60 mb-6 font-inter italic">"Design is not just what it looks like and feels like. Design is how it works."</p>
+                <div className="flex gap-4">
+                  <a href="#" className="w-10 h-10 rounded-full bg-[#1A1D26] flex items-center justify-center text-[#F7F8FC]/60 hover:bg-[#0D21A1] hover:text-white transition-all"><SiLinkedin size={18} /></a>
+                  <a href="#" className="w-10 h-10 rounded-full bg-[#1A1D26] flex items-center justify-center text-[#F7F8FC]/60 hover:bg-[#0D21A1] hover:text-white transition-all"><SiGithub size={18} /></a>
+                  <a href="#" className="w-10 h-10 rounded-full bg-[#1A1D26] flex items-center justify-center text-[#F7F8FC]/60 hover:bg-[#0D21A1] hover:text-white transition-all"><SiX size={18} /></a>
                 </div>
               </div>
             </motion.div>
@@ -258,7 +292,7 @@ export default function Home() {
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
             >
               <ContactForm />
             </motion.div>
@@ -267,9 +301,66 @@ export default function Home() {
       </section>
 
       {/* FOOTER */}
-      <footer className="py-8 border-t border-white/5 bg-[hsl(var(--bg-dark))]">
-        <div className="container mx-auto px-6 text-center text-muted-foreground text-sm">
-          <p>© {new Date().getFullYear()} John Doe. All rights reserved.</p>
+      <footer className="bg-[#0B0D12] pt-20 pb-10 relative">
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#0D21A1] to-transparent opacity-30" />
+        
+        <div className="container mx-auto px-6">
+          <div className="grid md:grid-cols-3 gap-12 mb-16">
+            <div className="space-y-6">
+              <h3 className="text-2xl font-bold text-white font-sans tracking-tight">John<span className="text-[#0D21A1]">.</span>Doe</h3>
+              <p className="text-[#F7F8FC]/40 font-inter leading-relaxed max-w-xs">
+                Crafting digital excellence through code and design. Building products that matter.
+              </p>
+            </div>
+            
+            <div className="space-y-6">
+              <h4 className="text-lg font-bold text-white font-sans uppercase tracking-wider">Quick Links</h4>
+              <ul className="space-y-3">
+                {["Home", "About", "Projects", "Skills", "Contact"].map((item) => (
+                  <li key={item}>
+                    <ScrollLink 
+                      to={item.toLowerCase()} 
+                      smooth={true} 
+                      duration={500} 
+                      className="text-[#F7F8FC]/60 hover:text-[#0D21A1] cursor-pointer transition-colors font-inter"
+                    >
+                      {item}
+                    </ScrollLink>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            
+            <div className="space-y-6">
+              <h4 className="text-lg font-bold text-white font-sans uppercase tracking-wider">Social</h4>
+              <ul className="space-y-3">
+                <li><a href="#" className="text-[#F7F8FC]/60 hover:text-[#0D21A1] transition-colors font-inter">LinkedIn</a></li>
+                <li><a href="#" className="text-[#F7F8FC]/60 hover:text-[#0D21A1] transition-colors font-inter">GitHub</a></li>
+                <li><a href="#" className="text-[#F7F8FC]/60 hover:text-[#0D21A1] transition-colors font-inter">X (Twitter)</a></li>
+                <li><a href="#" className="text-[#F7F8FC]/60 hover:text-[#0D21A1] transition-colors font-inter">Dribbble</a></li>
+              </ul>
+            </div>
+          </div>
+          
+          <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+            <p className="text-[#F7F8FC]/20 text-sm font-inter">
+              © {new Date().getFullYear()} John Doe. All rights reserved.
+            </p>
+            
+            <AnimatePresence>
+              {showBackToTop && (
+                <motion.button
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.8 }}
+                  onClick={scrollToTop}
+                  className="w-12 h-12 rounded-full bg-[#1A1D26] border border-white/10 flex items-center justify-center text-[#0D21A1] hover:bg-[#0D21A1] hover:text-white transition-all shadow-xl"
+                >
+                  <ArrowUp size={24} />
+                </motion.button>
+              )}
+            </AnimatePresence>
+          </div>
         </div>
       </footer>
     </div>

@@ -29,8 +29,8 @@ export function ContactForm() {
   }
 
   return (
-    <div className="w-full max-w-lg mx-auto bg-card p-8 rounded-2xl border border-white/5 shadow-xl">
-      <h3 className="text-2xl font-bold mb-6">Send me a message</h3>
+    <div className="w-full bg-[#1A1D26] p-8 rounded-2xl border border-white/5 shadow-xl">
+      <h3 className="text-2xl font-bold mb-6 text-white font-sans">Send a Message</h3>
       
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -39,11 +39,11 @@ export function ContactForm() {
             name="name"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="text-muted-foreground">Name</FormLabel>
+                <FormLabel className="text-[#F7F8FC]/60">Name</FormLabel>
                 <FormControl>
                   <Input 
                     placeholder="Your name" 
-                    className="bg-secondary/50 border-white/10 focus:border-primary/50 transition-colors" 
+                    className="bg-[#0B0D12] border-white/10 text-white focus:border-[#0D21A1] focus:ring-1 focus:ring-[#0D21A1] transition-all" 
                     {...field} 
                   />
                 </FormControl>
@@ -57,12 +57,12 @@ export function ContactForm() {
             name="email"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="text-muted-foreground">Email</FormLabel>
+                <FormLabel className="text-[#F7F8FC]/60">Email</FormLabel>
                 <FormControl>
                   <Input 
                     type="email" 
                     placeholder="hello@example.com" 
-                    className="bg-secondary/50 border-white/10 focus:border-primary/50 transition-colors" 
+                    className="bg-[#0B0D12] border-white/10 text-white focus:border-[#0D21A1] focus:ring-1 focus:ring-[#0D21A1] transition-all" 
                     {...field} 
                   />
                 </FormControl>
@@ -76,11 +76,11 @@ export function ContactForm() {
             name="message"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="text-muted-foreground">Message</FormLabel>
+                <FormLabel className="text-[#F7F8FC]/60">Message</FormLabel>
                 <FormControl>
                   <Textarea 
                     placeholder="Tell me about your project..." 
-                    className="min-h-[150px] bg-secondary/50 border-white/10 focus:border-primary/50 transition-colors resize-none" 
+                    className="min-h-[150px] bg-[#0B0D12] border-white/10 text-white focus:border-[#0D21A1] focus:ring-1 focus:ring-[#0D21A1] transition-all resize-none" 
                     {...field} 
                   />
                 </FormControl>
@@ -92,7 +92,7 @@ export function ContactForm() {
           <Button 
             type="submit" 
             disabled={isPending}
-            className="w-full h-12 bg-primary hover:bg-primary/90 text-white font-medium rounded-xl shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transition-all duration-300"
+            className="w-full h-12 bg-[#0D21A1] hover:bg-[#0D21A1]/90 text-white font-medium rounded-xl shadow-lg shadow-[#0D21A1]/25 hover:shadow-xl hover:shadow-[#0D21A1]/30 transition-all duration-300"
           >
             {isPending ? (
               <>
