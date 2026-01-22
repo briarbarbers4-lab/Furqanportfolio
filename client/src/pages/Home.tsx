@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { Link as ScrollLink } from "react-scroll";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowDown, Github, Linkedin, Twitter, Code2, Database, Layout } from "lucide-react";
-import { SiLinkedin, SiGithub, SiTwitter } from "react-icons/si";
+import { SiLinkedin, SiGithub, SiX } from "react-icons/si";
 import { Navigation } from "@/components/Navigation";
 import { ProjectCard } from "@/components/ProjectCard";
 import { ContactForm } from "@/components/ContactForm";
@@ -33,7 +33,7 @@ const AboutSection = () => {
               <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 flex gap-4 bg-white px-6 py-3 rounded-full shadow-lg">
                 <a href="#" className="text-[#0D21A1] hover:scale-110 transition-transform"><SiLinkedin size={20} /></a>
                 <a href="#" className="text-[#0D21A1] hover:scale-110 transition-transform"><SiGithub size={20} /></a>
-                <a href="#" className="text-[#0D21A1] hover:scale-110 transition-transform"><SiTwitter size={20} /></a>
+                <a href="#" className="text-[#0D21A1] hover:scale-110 transition-transform"><SiX size={20} /></a>
               </div>
             </div>
           </div>
@@ -125,48 +125,6 @@ export default function Home() {
 
       {/* ABOUT SECTION */}
       <AboutSection />
-        <div className="container mx-auto px-6">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="max-w-4xl mx-auto text-center"
-          >
-            <span className="text-primary font-display text-3xl mb-2 block">About Me</span>
-            <h2 className="text-4xl md:text-5xl font-bold mb-8">Passionate about clean code & design</h2>
-            <p className="text-lg text-muted-foreground leading-relaxed mb-12">
-              I am a full-stack developer with a keen eye for design. I specialize in building responsive, 
-              high-performance web applications using modern technologies. My approach combines technical 
-              expertise with creative problem-solving to deliver exceptional user experiences.
-            </p>
-            
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="p-6 rounded-2xl bg-card border border-white/5 hover:border-primary/20 transition-colors">
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-4 mx-auto">
-                  <Code2 size={24} />
-                </div>
-                <h3 className="text-xl font-bold mb-2">Frontend</h3>
-                <p className="text-muted-foreground text-sm">React, Tailwind, Framer Motion</p>
-              </div>
-              <div className="p-6 rounded-2xl bg-card border border-white/5 hover:border-primary/20 transition-colors">
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-4 mx-auto">
-                  <Database size={24} />
-                </div>
-                <h3 className="text-xl font-bold mb-2">Backend</h3>
-                <p className="text-muted-foreground text-sm">Node.js, PostgreSQL, API Design</p>
-              </div>
-              <div className="p-6 rounded-2xl bg-card border border-white/5 hover:border-primary/20 transition-colors">
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-4 mx-auto">
-                  <Layout size={24} />
-                </div>
-                <h3 className="text-xl font-bold mb-2">Design</h3>
-                <p className="text-muted-foreground text-sm">UI/UX, Responsive, Accessibility</p>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
 
       {/* PROJECTS SECTION */}
       <section id="projects" className="py-24 relative overflow-hidden">
