@@ -116,11 +116,17 @@ async function seedDatabase() {
       { name: "React", category: "Frontend", proficiency: 90 },
       { name: "TypeScript", category: "Frontend", proficiency: 85 },
       { name: "Tailwind CSS", category: "Frontend", proficiency: 95 },
+      { name: "Next.js", category: "Frontend", proficiency: 80 },
       { name: "Node.js", category: "Backend", proficiency: 80 },
       { name: "PostgreSQL", category: "Backend", proficiency: 75 },
       { name: "Drizzle ORM", category: "Backend", proficiency: 80 },
+      { name: "REST APIs", category: "Backend", proficiency: 90 },
       { name: "Git", category: "Tools", proficiency: 85 },
       { name: "Figma", category: "Tools", proficiency: 70 },
+      { name: "Docker", category: "Tools", proficiency: 65 },
+      { name: "Agile", category: "Soft Skills", proficiency: 90 },
+      { name: "Communication", category: "Soft Skills", proficiency: 95 },
+      { name: "Problem Solving", category: "Soft Skills", proficiency: 90 },
     ];
 
     for (const skill of skills) {

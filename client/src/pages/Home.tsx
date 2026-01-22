@@ -156,7 +156,7 @@ export default function Home() {
       </section>
 
       {/* SKILLS SECTION */}
-      <section id="skills" className="py-24 bg-card/30">
+      <section id="skills" className="py-24 bg-[#F7F8FC]">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -164,32 +164,57 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <span className="text-primary font-display text-3xl mb-2 block">Expertise</span>
-            <h2 className="text-4xl md:text-5xl font-bold">Skills & Tools</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-[#0B0D12] mb-2 font-sans">Skills & Expertise</h2>
+            <h3 className="text-3xl font-bold text-[#0D21A1] font-allura">What I bring to the table</h3>
           </motion.div>
 
-          <div className="max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {skillsLoading ? (
-              <div className="h-40 bg-card/50 rounded-2xl animate-pulse" />
+              [1, 2, 3, 4].map((i) => (
+                <div key={i} className="h-64 bg-white rounded-2xl animate-pulse shadow-sm" />
+              ))
             ) : (
-              <div className="flex flex-wrap justify-center gap-4">
-                {skills?.map((skill, index) => (
-                  <motion.div
-                    key={skill.id}
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.05 }}
-                    className="group relative"
-                  >
-                    <div className="px-6 py-3 rounded-xl bg-card border border-white/5 hover:border-primary hover:shadow-[0_0_15px_rgba(13,33,161,0.3)] transition-all duration-300">
-                      <span className="font-medium text-muted-foreground group-hover:text-white transition-colors">
-                        {skill.name}
-                      </span>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
+              Object.entries(
+                (skills || []).reduce((acc, skill) => {
+                  const category = skill.category;
+                  if (!acc[category]) acc[category] = [];
+                  acc[category].push(skill);
+                  return acc;
+                }, {} as Record<string, typeof skills>)
+              ).map(([category, categorySkills], categoryIndex) => (
+                <motion.div
+                  key={category}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: categoryIndex * 0.1 }}
+                  className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
+                >
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="w-1.5 h-6 bg-[#0D21A1] rounded-full" />
+                    <h3 className="text-xl font-bold text-[#0B0D12] font-sans">{category}</h3>
+                  </div>
+                  <div className="space-y-4">
+                    {categorySkills.map((skill, skillIndex) => (
+                      <div key={skill.id} className="space-y-1.5">
+                        <div className="flex justify-between text-sm">
+                          <span className="font-medium text-[#0B0D12]">{skill.name}</span>
+                          <span className="text-[#0D21A1]">{skill.proficiency}%</span>
+                        </div>
+                        <div className="h-1.5 w-full bg-gray-100 rounded-full overflow-hidden">
+                          <motion.div
+                            initial={{ width: 0 }}
+                            whileInView={{ width: `${skill.proficiency}%` }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 1, delay: 0.5 + (skillIndex * 0.1) }}
+                            className="h-full bg-[#0D21A1] rounded-full"
+                          />
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </motion.div>
+              ))
             )}
           </div>
         </div>
