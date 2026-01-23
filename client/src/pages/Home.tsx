@@ -355,7 +355,7 @@ const ProjectsSection = () => {
                   <h3 className="text-xl font-bold text-white mb-2 font-sans">{project.title}</h3>
                   <p className="text-[#e0e0e0] text-sm mb-4 font-inter">{project.description}</p>
                   <div className="flex flex-wrap gap-2">
-                    {project.technologies.map((tech, techIndex) => (
+                    {(project.technologies || []).map((tech, techIndex) => (
                       <GlassBadge key={techIndex} className="text-xs px-3 py-1">
                         {tech}
                       </GlassBadge>
@@ -529,7 +529,7 @@ export default function Home() {
       <main className="pt-24">
         <HeroSection />
         <AboutSection />
-        <MyWorkSection />
+        <ProjectsSection />
         <SkillsSection />
         <ContactSection />
       </main>
