@@ -910,29 +910,12 @@ const SkillsSection = () => {
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              whileHover={{ y: -10 }}
+              transition={{ duration: 0.6, delay: index * 0.05 }}
+              whileHover={{ y: -5, scale: 1.05 }}
             >
-              <GlassCard className="overflow-hidden h-full">
-                <div className="h-48 overflow-hidden rounded-t-2xl">
-                  <img
-                    src={project.imageUrl}
-                    alt={project.title}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-white mb-2 font-sans">{project.title}</h3>
-                  <p className="text-[#e0e0e0] text-sm mb-4 font-inter">{project.description}</p>
-                  <div className="flex flex-wrap gap-2">
-                    {project.technologies.map((tech, techIndex) => (
-                      <GlassBadge key={techIndex} className="text-xs px-3 py-1">
-                        {tech}
-                      </GlassBadge>
-                    ))}
-                  </div>
-                </div>
-              </GlassCard>
+              <GlassBadge className="text-sm px-6 py-3">
+                {skill}
+              </GlassBadge>
             </motion.div>
           ))}
         </div>
@@ -1099,10 +1082,11 @@ export default function Home() {
 
       <main className="pt-24">
         <HeroSection />
-        <AboutSection />
-        <MyWorkSection />
+        <VideoPortfolioSection />
+        <StatsSection />
         <SkillsSection />
-        <CTASection />
+        <TestimonialsSection />
+        <ContactSection />
       </main>
 
       <Footer />
