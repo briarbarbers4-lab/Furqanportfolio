@@ -51,7 +51,7 @@ const FloatingHeader = () => {
             variant="ghost"
             className="text-white hover:text-[#c77dff] hover:bg-transparent px-4 py-2 rounded-full transition-all"
           >
-            Home
+            Hom
           </Button>
         </ScrollLink>
         <ScrollLink to="contact" smooth={true} duration={500} offset={-80}>
