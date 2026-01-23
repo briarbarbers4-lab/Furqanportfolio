@@ -26,34 +26,21 @@ interface Video {
 // Video Data
 const videoProjects = [
   // Short Form
-  { id: 1, title: "Viral Product Launch - 45s", duration: "0:45", views: "5.2M views", category: "Short Form", client: "Tech Brand", thumbnail: "https://images.unsplash.com/photo-1492691527719-9d1e07eab495?w=400&h=225&fit=crop", tags: ["Motion Graphics", "Color Grading"] },
-  { id: 2, title: "Behind the Scenes Reel - 30s", duration: "0:30", views: "890K views", category: "Short Form", client: "Personal", thumbnail: "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=400&h=225&fit=crop", tags: ["VFX", "Sound Design"] },
-  { id: 3, title: "Quick Tips Series Ep.1 - 60s", duration: "1:00", views: "2.1M views", category: "Short Form", client: "YouTube", thumbnail: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=225&fit=crop", tags: ["Color Grading", "2D Animation"] },
-  { id: 4, title: "Brand Story Teaser - 15s", duration: "0:15", views: "1.3M views", category: "Short Form", client: "Social Media", thumbnail: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=400&h=225&fit=crop", tags: ["Motion Graphics"] },
-  { id: 5, title: "Trending Audio Edit - 25s", duration: "0:25", views: "8.7M views", category: "Short Form", client: "TikTok", thumbnail: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=225&fit=crop", tags: ["Sound Design", "VFX"] },
-  { id: 6, title: "Daily Vlog Highlight - 40s", duration: "0:40", views: "450K views", category: "Short Form", client: "Instagram", thumbnail: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&h=225&fit=crop", tags: ["Color Grading"] },
-  { id: 7, title: "Product Demo Loop - 20s", duration: "0:20", views: "320K views", category: "Short Form", client: "Twitter", thumbnail: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=225&fit=crop", tags: ["Motion Graphics", "2D Animation"] },
-  { id: 8, title: "Motivational Quote Edit - 35s", duration: "0:35", views: "180K views", category: "Short Form", client: "LinkedIn", thumbnail: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=225&fit=crop", tags: ["VFX", "Sound Design"] },
+  { id: 1, title: "Viral Product Launch", duration: "0:45", views: "", category: "Short Form", client: "Tech Brand", thumbnail: "https://images.unsplash.com/photo-1492691527719-9d1e07eab495?w=400&h=225&fit=crop", tags: ["Motion Graphics", "Color Grading"] },
+  { id: 2, title: "Behind the Scenes Reel", duration: "0:30", views: "", category: "Short Form", client: "Personal", thumbnail: "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=400&h=225&fit=crop", tags: ["VFX", "Sound Design"] },
+  { id: 3, title: "Quick Tips Series Ep.1", duration: "1:00", views: "", category: "Short Form", client: "YouTube", thumbnail: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=225&fit=crop", tags: ["Color Grading", "2D Animation"] },
+  { id: 4, title: "Brand Story Teaser", duration: "0:15", views: "", category: "Short Form", client: "Social Media", thumbnail: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=400&h=225&fit=crop", tags: ["Motion Graphics"] },
+  { id: 5, title: "Trending Audio Edit", duration: "0:25", views: "", category: "Short Form", client: "TikTok", thumbnail: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=225&fit=crop", tags: ["Sound Design", "VFX"] },
+  { id: 6, title: "Daily Vlog Highlight", duration: "0:40", views: "", category: "Short Form", client: "Instagram", thumbnail: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&h=225&fit=crop", tags: ["Color Grading"] },
+  { id: 7, title: "Product Demo Loop", duration: "0:20", views: "", category: "Short Form", client: "Twitter", thumbnail: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=225&fit=crop", tags: ["Motion Graphics", "2D Animation"] },
   // Long Form
-  { id: 9, title: "Brand Documentary - 8:45", duration: "8:45", views: "3.5M views", category: "Long Form", client: "Fortune 500", thumbnail: "https://images.unsplash.com/photo-1489599735734-79b4dfe3b22a?w=400&h=225&fit=crop", tags: ["Color Grading", "Sound Design"] },
-  { id: 10, title: "Company Culture Video - 5:20", duration: "5:20", views: "120K views", category: "Long Form", client: "Corporate", thumbnail: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=225&fit=crop", tags: ["Motion Graphics", "VFX"] },
-  { id: 11, title: "Creative Process Breakdown - 12:30", duration: "12:30", views: "890K views", category: "Long Form", client: "YouTube", thumbnail: "https://images.unsplash.com/photo-1492691527719-9d1e07eab495?w=400&h=225&fit=crop", tags: ["2D Animation", "Color Grading"] },
-  { id: 12, title: "Client Success Story - 6:15", duration: "6:15", views: "250K views", category: "Long Form", client: "Case Study", thumbnail: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=400&h=225&fit=crop", tags: ["Motion Graphics", "Sound Design"] },
-  { id: 13, title: "Tutorial: Advanced Color Grading - 15:00", duration: "15:00", views: "1.2M views", category: "Long Form", client: "Education", thumbnail: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=225&fit=crop", tags: ["Color Grading", "VFX"] },
-  { id: 14, title: "Event Coverage Highlight - 10:30", duration: "10:30", views: "85K views", category: "Long Form", client: "Corporate", thumbnail: "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=400&h=225&fit=crop", tags: ["Motion Graphics"] },
-  { id: 15, title: "Interview Series Ep.3 - 7:45", duration: "7:45", views: "340K views", category: "Long Form", client: "Podcast", thumbnail: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=225&fit=crop", tags: ["Sound Design", "Color Grading"] },
-  { id: 16, title: "Product Launch Campaign - 4:20", duration: "4:20", views: "2.8M views", category: "Long Form", client: "Commercial", thumbnail: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=225&fit=crop", tags: ["Motion Graphics", "VFX"] },
-  { id: 17, title: "Cinematic Travel Film - 9:00", duration: "9:00", views: "650K views", category: "Long Form", client: "Personal", thumbnail: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=225&fit=crop", tags: ["Color Grading", "Sound Design"] },
-  { id: 18, title: "Explainer Video - 3:30", duration: "3:30", views: "1.1M views", category: "Long Form", client: "Animation", thumbnail: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&h=225&fit=crop", tags: ["2D Animation", "Motion Graphics"] },
-  // Commercials
-  { id: 19, title: "Luxury Brand Campaign - 2:15", duration: "2:15", views: "4.2M views", category: "Commercials", client: "Fashion", thumbnail: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=400&h=225&fit=crop", tags: ["Color Grading", "VFX"] },
-  { id: 20, title: "Tech Product Demo - 1:30", duration: "1:30", views: "6.8M views", category: "Commercials", client: "Tech", thumbnail: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&h=225&fit=crop", tags: ["Motion Graphics", "Sound Design"] },
-  // Music Videos
-  { id: 21, title: "Indie Artist Music Video - 4:00", duration: "4:00", views: "2.5M views", category: "Music Videos", client: "Music", thumbnail: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=225&fit=crop", tags: ["Color Grading", "VFX", "2D Animation"] },
-  { id: 22, title: "Electronic Track Visualizer - 3:45", duration: "3:45", views: "1.8M views", category: "Music Videos", client: "Music", thumbnail: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=400&h=225&fit=crop", tags: ["Motion Graphics", "Sound Design"] },
-  // Corporate
-  { id: 23, title: "Annual Report Video - 6:30", duration: "6:30", views: "95K views", category: "Corporate", client: "Finance", thumbnail: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=225&fit=crop", tags: ["Motion Graphics", "Color Grading"] },
-  { id: 24, title: "Employee Training Series - 8:00", duration: "8:00", views: "75K views", category: "Corporate", client: "Corporate", thumbnail: "https://images.unsplash.com/photo-1489599735734-79b4dfe3b22a?w=400&h=225&fit=crop", tags: ["2D Animation", "Sound Design"] },
+  { id: 9, title: "Brand Documentary", duration: "8:45", views: "", category: "Long Form", client: "Fortune 500", thumbnail: "https://images.unsplash.com/photo-1489599735734-79b4dfe3b22a?w=400&h=225&fit=crop", tags: ["Color Grading", "Sound Design"] },
+  { id: 10, title: "Company Culture Video", duration: "5:20", views: "", category: "Long Form", client: "Corporate", thumbnail: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=225&fit=crop", tags: ["Motion Graphics", "VFX"] },
+  { id: 11, title: "Creative Process Breakdown", duration: "12:30", views: "", category: "Long Form", client: "YouTube", thumbnail: "https://images.unsplash.com/photo-1492691527719-9d1e07eab495?w=400&h=225&fit=crop", tags: ["2D Animation", "Color Grading"] },
+  { id: 12, title: "Client Success Story", duration: "6:15", views: "", category: "Long Form", client: "Case Study", thumbnail: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=400&h=225&fit=crop", tags: ["Motion Graphics", "Sound Design"] },
+  { id: 13, title: "Advanced Color Grading", duration: "15:00", views: "", category: "Long Form", client: "Education", thumbnail: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=225&fit=crop", tags: ["Color Grading", "VFX"] },
+  { id: 14, title: "Event Coverage Highlight", duration: "10:30", views: "", category: "Long Form", client: "Corporate", thumbnail: "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=400&h=225&fit=crop", tags: ["Motion Graphics"] },
+  { id: 15, title: "Interview Series", duration: "7:45", views: "", category: "Long Form", client: "Podcast", thumbnail: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=225&fit=crop", tags: ["Sound Design", "Color Grading"] },
 ];
 
 // Glassmorphic Card Component
@@ -117,48 +104,6 @@ const FloatingHeader = () => {
 const HeroSection = () => {
   return (
     <section id="home" className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden px-4 py-20">
-      {/* Animated Background */}
-      <div className="absolute inset-0 z-0">
-        <motion.div
-          className="absolute top-1/4 left-1/4 w-64 h-64 bg-gradient-to-r from-[#9d4edd] to-[#7b2cbf] rounded-full opacity-20 blur-3xl"
-          animate={{
-            x: [0, 50, 0],
-            y: [0, 30, 0],
-            scale: [1, 1.1, 1]
-          }}
-          transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
-        />
-        <motion.div
-          className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-gradient-to-r from-[#c77dff] to-[#9d4edd] rounded-full opacity-20 blur-2xl"
-          animate={{
-            x: [0, -40, 0],
-            y: [0, -20, 0],
-            scale: [1, 1.05, 1]
-          }}
-          transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
-        />
-        {/* Floating particles */}
-        {[...Array(20)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute w-2 h-2 bg-[#c77dff] rounded-full opacity-30"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-            }}
-            animate={{
-              y: [0, -20, 0],
-              opacity: [0.3, 0.6, 0.3],
-            }}
-            transition={{
-              duration: Math.random() * 3 + 2,
-              repeat: Infinity,
-              delay: Math.random() * 2,
-            }}
-          />
-        ))}
-      </div>
-
       <div className="container mx-auto text-center relative z-10 space-y-16">
         {/* Demo Reel Section */}
         <motion.div
@@ -394,8 +339,6 @@ const VideoPortfolioSection = () => {
                     {/* Play Button Overlay */}
                     <motion.div
                       className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                      initial={{ scale: 0.8 }}
-                      whileHover={{ scale: 1.1 }}
                     >
                       <div className="w-16 h-16 bg-[#9d4edd]/80 backdrop-blur-sm rounded-full flex items-center justify-center">
                         <Play size={24} className="text-white ml-1" />
@@ -404,10 +347,6 @@ const VideoPortfolioSection = () => {
                     {/* Duration Badge */}
                     <div className="absolute top-2 right-2 bg-black/70 backdrop-blur-sm px-2 py-1 rounded text-xs text-white font-medium">
                       {video.duration}
-                    </div>
-                    {/* View Count Badge */}
-                    <div className="absolute top-2 left-2 bg-black/70 backdrop-blur-sm px-2 py-1 rounded text-xs text-white font-medium">
-                      {video.views}
                     </div>
                     {/* Gradient Overlay */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
@@ -431,91 +370,22 @@ const VideoPortfolioSection = () => {
 
         {/* Video Modal */}
         <Dialog open={!!selectedVideo} onOpenChange={() => setSelectedVideo(null)}>
-          <DialogContent className="max-w-6xl w-full bg-[#1a0b2e] border border-[#c77dff33] backdrop-blur-md">
+          <DialogContent className="max-w-6xl w-full bg-[#1a0b2e] border border-[#c77dff33] backdrop-blur-md p-0 overflow-hidden">
             {selectedVideo && (
-              <div className="space-y-6">
-                {/* Video Player */}
-                <div className="relative aspect-video bg-black rounded-2xl overflow-hidden">
-                  <img
-                    src={selectedVideo.thumbnail}
-                    alt={selectedVideo.title}
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <motion.button
-                      className="w-20 h-20 bg-[#9d4edd]/80 backdrop-blur-sm rounded-full flex items-center justify-center"
-                      whileHover={{ scale: 1.1 }}
-                      whileTap={{ scale: 0.9 }}
-                    >
-                      <Play size={32} className="text-white ml-2" />
-                    </motion.button>
-                  </div>
-                </div>
-
-                {/* Project Details */}
-                <div className="grid md:grid-cols-2 gap-8">
-                  <div>
-                    <h3 className="text-3xl font-bold text-white mb-4 font-sans">{selectedVideo.title}</h3>
-                    <div className="space-y-4 text-[#e0e0e0] font-inter">
-                      <div className="flex items-center gap-4">
-                        <span className="text-[#c77dff] font-medium">Client:</span>
-                        <span>{selectedVideo.client}</span>
-                      </div>
-                      <div className="flex items-center gap-4">
-                        <span className="text-[#c77dff] font-medium">Duration:</span>
-                        <span>{selectedVideo.duration}</span>
-                      </div>
-                      <div className="flex items-center gap-4">
-                        <span className="text-[#c77dff] font-medium">Views:</span>
-                        <span>{selectedVideo.views}</span>
-                      </div>
-                      <div className="flex items-center gap-4">
-                        <span className="text-[#c77dff] font-medium">Role:</span>
-                        <span>Director | Editor | Colorist</span>
-                      </div>
-                    </div>
-                    <div className="mt-6">
-                      <h4 className="text-xl font-bold text-white mb-3 font-sans">Description</h4>
-                      <p className="text-[#e0e0e0] font-inter leading-relaxed">
-                        This project showcases innovative editing techniques and creative storytelling to deliver a compelling visual experience that resonates with the target audience.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div>
-                    <h4 className="text-xl font-bold text-white mb-3 font-sans">Tech Stack Used</h4>
-                    <div className="flex flex-wrap gap-2 mb-6">
-                      {selectedVideo.tags.map((tag, index) => (
-                        <GlassBadge key={index} className="px-4 py-2">
-                          {tag}
-                        </GlassBadge>
-                      ))}
-                    </div>
-
-                    <h4 className="text-xl font-bold text-white mb-3 font-sans">Results</h4>
-                    <ul className="space-y-2 text-[#e0e0e0] font-inter">
-                      <li>• 10M+ views achieved</li>
-                      <li>• 150% engagement increase</li>
-                      <li>• Award-winning recognition</li>
-                    </ul>
-
-                    <div className="mt-6 flex gap-4">
-                      <Button className="bg-gradient-to-r from-[#9d4edd] to-[#7b2cbf] text-white px-6 py-3 rounded-full font-semibold">
-                        Next Project
-                      </Button>
-                      <div className="flex gap-2">
-                        <Button variant="outline" size="icon" className="border-[#c77dff33] text-[#c77dff] hover:bg-[#c77dff20]">
-                          <SiLinkedin size={18} />
-                        </Button>
-                        <Button variant="outline" size="icon" className="border-[#c77dff33] text-[#c77dff] hover:bg-[#c77dff20]">
-                          <SiYoutube size={18} />
-                        </Button>
-                        <Button variant="outline" size="icon" className="border-[#c77dff33] text-[#c77dff] hover:bg-[#c77dff20]">
-                          <span className="text-sm">🔗</span>
-                        </Button>
-                      </div>
-                    </div>
-                  </div>
+              <div className="relative aspect-video bg-black">
+                <img
+                  src={selectedVideo.thumbnail}
+                  alt={selectedVideo.title}
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <motion.button
+                    className="w-20 h-20 bg-[#9d4edd]/80 backdrop-blur-sm rounded-full flex items-center justify-center"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                  >
+                    <Play size={32} className="text-white ml-2" />
+                  </motion.button>
                 </div>
               </div>
             )}
@@ -1091,17 +961,8 @@ export default function Home() {
 
       <Footer />
 
-      {/* Global Background Effects */}
       <div className="fixed inset-0 -z-10 pointer-events-none">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#1a0b2e] to-[#0b0d12]"></div>
-        <motion.div
-          className="absolute top-1/2 left-1/2 w-[800px] h-[800px] -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#9d4edd] to-[#7b2cbf] rounded-full opacity-5 blur-3xl"
-          animate={{ 
-            scale: [1, 1.1, 1],
-            rotate: [0, 180, 360]
-          }}
-          transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-        />
+        <div className="absolute inset-0 bg-[#0b0d12]"></div>
       </div>
     </div>
   );
