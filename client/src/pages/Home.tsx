@@ -910,67 +910,32 @@ const SkillsSection = () => {
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: index * 0.05 }}
-              whileHover={{ y: -5, scale: 1.05 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              whileHover={{ y: -10 }}
             >
-              <GlassBadge className="px-6 py-3 text-sm">
-                {skill}
-              </GlassBadge>
+              <GlassCard className="overflow-hidden h-full">
+                <div className="h-48 overflow-hidden rounded-t-2xl">
+                  <img
+                    src={project.imageUrl}
+                    alt={project.title}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-white mb-2 font-sans">{project.title}</h3>
+                  <p className="text-[#e0e0e0] text-sm mb-4 font-inter">{project.description}</p>
+                  <div className="flex flex-wrap gap-2">
+                    {project.technologies.map((tech, techIndex) => (
+                      <GlassBadge key={techIndex} className="text-xs px-3 py-1">
+                        {tech}
+                      </GlassBadge>
+                    ))}
+                  </div>
+                </div>
+              </GlassCard>
             </motion.div>
           ))}
         </div>
-      </div>
-    </section>
-  );
-};
-
-// CTA Section
-const CTASection = () => {
-  return (
-    <section className="py-24 px-4 relative">
-      <div className="container mx-auto text-center">
-        <GlassCard className="p-12 max-w-4xl mx-auto">
-          <motion.h2
-            className="text-4xl md:text-5xl font-bold text-white mb-6 font-sans"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            Let's Create Something Amazing
-          </motion.h2>
-          <motion.p
-            className="text-lg text-[#e0e0e0] mb-8 font-inter max-w-2xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            Have a project in mind? Let's discuss how we can bring your vision to life with cutting-edge video editing and storytelling.
-          </motion.p>
-
-          <motion.div
-            className="flex flex-col sm:flex-row gap-4 justify-center"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-          >
-            <Button
-              size="lg"
-              className="bg-gradient-to-r from-[#9d4edd] to-[#7b2cbf] text-white px-8 py-4 rounded-full font-semibold hover:from-[#7b2cbf] hover:to-[#9d4edd] transition-all hover:shadow-lg hover:shadow-[#9d4edd]/30"
-            >
-              Start a Project
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-2 border-[#c77dff33] text-[#c77dff] hover:bg-[#c77dff20] hover:text-white px-8 py-4 rounded-full font-semibold backdrop-blur-sm"
-            >
-              View My Services
-            </Button>
-          </motion.div>
-        </GlassCard>
       </div>
     </section>
   );
@@ -1134,13 +1099,8 @@ export default function Home() {
 
       <main className="pt-24">
         <HeroSection />
-        <VideoPortfolioSection />
-        <StatsSection />
-        <ClientLogosSection />
-        <TestimonialsSection />
-        <AwardsSection />
-        <FeaturedInSection />
-        <ProcessSection />
+        <AboutSection />
+        <MyWorkSection />
         <SkillsSection />
         <CTASection />
       </main>
