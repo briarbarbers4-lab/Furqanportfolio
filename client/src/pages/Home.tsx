@@ -131,14 +131,14 @@ const HeroSection = () => {
             }}
             transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
           >
-            CEO & Creative Director | Crafting Visual Stories
+            Co-Founder & CEO | Luminex Social
           </motion.p>
           <div className="max-w-4xl mx-auto space-y-6 text-xl md:text-2xl text-[#e0e0e0] font-inter leading-relaxed">
             <p>
-              Transforming raw footage into compelling visual narratives with over 3 years of expertise.
+              I help coaches, consultants, SaaS founders, and agency owners turn content into a scalable system that attracts leads, closes clients, and drives revenue across Instagram, LinkedIn, and YouTube.
             </p>
             <p>
-              Specializing in cinematic editing that elevates brands and tells unforgettable stories across 100+ global projects.
+              With 3+ years as a senior video editor and motion designer, I’ve partnered with top influencers and business owners to generate millions of views and real business results. I don’t just edit content — I manage the entire system behind it.
             </p>
           </div>
 
