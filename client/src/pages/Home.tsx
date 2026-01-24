@@ -26,17 +26,17 @@ interface Video {
 // Video Data
 const videoProjects = [
   // Short Form
-  { id: 1, title: "Viral Product Launch", duration: "0:45", views: "", category: "Short Form", client: "Tech Brand", thumbnail: "https://images.unsplash.com/photo-1492691527719-9d1e07eab495?w=400&h=225&fit=crop", tags: ["Motion Graphics", "Color Grading"] },
-  { id: 2, title: "Behind the Scenes Reel", duration: "0:30", views: "", category: "Short Form", client: "Personal", thumbnail: "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=400&h=225&fit=crop", tags: ["VFX", "Sound Design"] },
-  { id: 3, title: "Quick Tips Series Ep.1", duration: "1:00", views: "", category: "Short Form", client: "YouTube", thumbnail: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=225&fit=crop", tags: ["Color Grading", "2D Animation"] },
-  { id: 4, title: "Brand Story Teaser", duration: "0:15", views: "", category: "Short Form", client: "Social Media", thumbnail: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=400&h=225&fit=crop", tags: ["Motion Graphics"] },
-  { id: 5, title: "Trending Audio Edit", duration: "0:25", views: "", category: "Short Form", client: "TikTok", thumbnail: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=225&fit=crop", tags: ["Sound Design", "VFX"] },
-  { id: 6, title: "Daily Vlog Highlight", duration: "0:40", views: "", category: "Short Form", client: "Instagram", thumbnail: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&h=225&fit=crop", tags: ["Color Grading"] },
+  { id: 1, title: "Short 1", duration: "0:30", views: "", category: "Short Form", client: "Luminex", thumbnail: "https://img.youtube.com/vi/1KTLmD7okxY/maxresdefault.jpg", url: "https://www.youtube.com/embed/1KTLmD7okxY", tags: ["Shorts", "Creative"] },
+  { id: 2, title: "Short 2", duration: "0:30", views: "", category: "Short Form", client: "Luminex", thumbnail: "https://img.youtube.com/vi/8CMyACDvgiw/maxresdefault.jpg", url: "https://www.youtube.com/embed/8CMyACDvgiw", tags: ["Shorts", "Viral"] },
+  { id: 3, title: "Short 3", duration: "0:30", views: "", category: "Short Form", client: "Luminex", thumbnail: "https://img.youtube.com/vi/c0o1mOpvWHg/maxresdefault.jpg", url: "https://www.youtube.com/embed/c0o1mOpvWHg", tags: ["Shorts", "Edit"] },
+  { id: 4, title: "Short 4", duration: "0:30", views: "", category: "Short Form", client: "Luminex", thumbnail: "https://img.youtube.com/vi/1zwTqSBPJYI/maxresdefault.jpg", url: "https://www.youtube.com/embed/1zwTqSBPJYI", tags: ["Shorts", "Motion"] },
+  { id: 5, title: "Short 5", duration: "0:30", views: "", category: "Short Form", client: "Luminex", thumbnail: "https://img.youtube.com/vi/ayAjLHOl-MQ/maxresdefault.jpg", url: "https://www.youtube.com/embed/ayAjLHOl-MQ", tags: ["Shorts", "Visuals"] },
+  { id: 6, title: "Short 6", duration: "0:30", views: "", category: "Short Form", client: "Luminex", thumbnail: "https://img.youtube.com/vi/Zw52Jgsf_NE/maxresdefault.jpg", url: "https://www.youtube.com/embed/Zw52Jgsf_NE", tags: ["Shorts", "Story"] },
   // Long Form
-  { id: 9, title: "Brand Documentary", duration: "8:45", views: "", category: "Long Form", client: "Fortune 500", thumbnail: "https://images.unsplash.com/photo-1489599735734-79b4dfe3b22a?w=400&h=225&fit=crop", tags: ["Color Grading", "Sound Design"] },
-  { id: 10, title: "Company Culture Video", duration: "5:20", views: "", category: "Long Form", client: "Corporate", thumbnail: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=225&fit=crop", tags: ["Motion Graphics", "VFX"] },
-  { id: 11, title: "Creative Process Breakdown", duration: "12:30", views: "", category: "Long Form", client: "YouTube", thumbnail: "https://images.unsplash.com/photo-1492691527719-9d1e07eab495?w=400&h=225&fit=crop", tags: ["2D Animation", "Color Grading"] },
-  { id: 12, title: "Client Success Story", duration: "6:15", views: "", category: "Long Form", client: "Case Study", thumbnail: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=400&h=225&fit=crop", tags: ["Motion Graphics", "Sound Design"] },
+  { id: 9, title: "Long Form 1", duration: "5:00", views: "", category: "Long Form", client: "Luminex", thumbnail: "https://img.youtube.com/vi/hg98fzJTKh4/maxresdefault.jpg", url: "https://www.youtube.com/embed/hg98fzJTKh4", tags: ["Storytelling", "Cinematic"] },
+  { id: 10, title: "Long Form 2", duration: "8:00", views: "", category: "Long Form", client: "Luminex", thumbnail: "https://img.youtube.com/vi/hxWDYQMgNn0/maxresdefault.jpg", url: "https://www.youtube.com/embed/hxWDYQMgNn0", tags: ["Production", "Edit"] },
+  { id: 11, title: "Long Form 3", duration: "10:00", views: "", category: "Long Form", client: "Luminex", thumbnail: "https://img.youtube.com/vi/IeM04ObtEbA/maxresdefault.jpg", url: "https://www.youtube.com/embed/IeM04ObtEbA", tags: ["Creative", "VFX"] },
+  { id: 12, title: "Long Form 4", duration: "12:00", views: "", category: "Long Form", client: "Luminex", thumbnail: "https://img.youtube.com/vi/L1Eo7fMj-vE/maxresdefault.jpg", url: "https://www.youtube.com/embed/L1Eo7fMj-vE", tags: ["Branding", "Motion"] },
 ];
 
 // Glassmorphic Card Component
@@ -163,20 +163,20 @@ const HeroSection = () => {
           </div>
 
           <motion.div
-            className="pt-12 flex justify-center gap-12 text-[#c77dff]/60"
+            className="pt-12 flex flex-wrap justify-center gap-12 text-[#c77dff]/60"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1 }}
           >
-            <div className="text-center">
+            <div className="flex flex-col items-center">
               <p className="text-3xl font-bold text-white">3+</p>
               <p className="text-sm uppercase tracking-widest">Years</p>
             </div>
-            <div className="text-center">
+            <div className="flex flex-col items-center">
               <p className="text-3xl font-bold text-white">100+</p>
               <p className="text-sm uppercase tracking-widest">Projects</p>
             </div>
-            <div className="text-center">
+            <div className="flex flex-col items-center">
               <p className="text-3xl font-bold text-white">15+</p>
               <p className="text-sm uppercase tracking-widest">Clients</p>
             </div>
@@ -314,20 +314,13 @@ const VideoPortfolioSection = () => {
           <DialogContent className="max-w-6xl w-full bg-[#1a0b2e] border border-[#c77dff33] backdrop-blur-md p-0 overflow-hidden">
             {selectedVideo && (
               <div className="relative aspect-video bg-black">
-                <img
-                  src={selectedVideo.thumbnail}
-                  alt={selectedVideo.title}
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <motion.button
-                    className="w-20 h-20 bg-[#9d4edd]/80 backdrop-blur-sm rounded-full flex items-center justify-center"
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
-                  >
-                    <Play size={32} className="text-white ml-2" />
-                  </motion.button>
-                </div>
+                <iframe
+                  src={`${selectedVideo.url}?autoplay=1`}
+                  title={selectedVideo.title}
+                  className="w-full h-full border-0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
               </div>
             )}
           </DialogContent>
@@ -349,7 +342,7 @@ const StatsSection = () => {
   return (
     <section className="py-24 px-4 relative">
       <div className="container mx-auto">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 max-w-4xl mx-auto">
+        <div className="flex flex-wrap justify-center gap-8 max-w-4xl mx-auto">
           {stats.map((stat, index) => (
             <motion.div
               key={index}
@@ -357,9 +350,9 @@ const StatsSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="text-center"
+              className="text-center w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.33%-1.34rem)]"
             >
-              <GlassCard className="p-8">
+              <GlassCard className="p-8 h-full flex flex-col items-center justify-center">
                 <motion.div
                   className="text-4xl md:text-5xl font-bold text-white mb-2 font-sans"
                   initial={{ scale: 0 }}
