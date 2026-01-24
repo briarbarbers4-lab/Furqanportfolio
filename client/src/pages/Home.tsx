@@ -9,7 +9,7 @@ import { ContactForm } from "@/components/ContactForm";
 import { useProjects } from "@/hooks/use-projects";
 import { useSkills } from "@/hooks/use-skills";
 import { Button } from "@/components/ui/button";
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 
 // Video Interface
 interface Video {
@@ -26,17 +26,17 @@ interface Video {
 // Video Data
 const videoProjects = [
   // Short Form
-  { id: 1, title: "Short 1", duration: "0:30", views: "", category: "Short Form", client: "Luminex", thumbnail: "https://img.youtube.com/vi/1KTLmD7okxY/maxresdefault.jpg", url: "https://www.youtube.com/embed/1KTLmD7okxY", tags: ["Shorts", "Creative"] },
-  { id: 2, title: "Short 2", duration: "0:30", views: "", category: "Short Form", client: "Luminex", thumbnail: "https://img.youtube.com/vi/8CMyACDvgiw/maxresdefault.jpg", url: "https://www.youtube.com/embed/8CMyACDvgiw", tags: ["Shorts", "Viral"] },
-  { id: 3, title: "Short 3", duration: "0:30", views: "", category: "Short Form", client: "Luminex", thumbnail: "https://img.youtube.com/vi/c0o1mOpvWHg/maxresdefault.jpg", url: "https://www.youtube.com/embed/c0o1mOpvWHg", tags: ["Shorts", "Edit"] },
-  { id: 4, title: "Short 4", duration: "0:30", views: "", category: "Short Form", client: "Luminex", thumbnail: "https://img.youtube.com/vi/1zwTqSBPJYI/maxresdefault.jpg", url: "https://www.youtube.com/embed/1zwTqSBPJYI", tags: ["Shorts", "Motion"] },
-  { id: 5, title: "Short 5", duration: "0:30", views: "", category: "Short Form", client: "Luminex", thumbnail: "https://img.youtube.com/vi/ayAjLHOl-MQ/maxresdefault.jpg", url: "https://www.youtube.com/embed/ayAjLHOl-MQ", tags: ["Shorts", "Visuals"] },
-  { id: 6, title: "Short 6", duration: "0:30", views: "", category: "Short Form", client: "Luminex", thumbnail: "https://img.youtube.com/vi/Zw52Jgsf_NE/maxresdefault.jpg", url: "https://www.youtube.com/embed/Zw52Jgsf_NE", tags: ["Shorts", "Story"] },
+  { id: 1, title: "Short 1", duration: "0:30", views: "", category: "Short Form", client: "Luminex", thumbnail: "https://i.ytimg.com/vi/1KTLmD7okxY/hqdefault.jpg", url: "https://www.youtube.com/embed/1KTLmD7okxY", tags: ["Shorts", "Creative"] },
+  { id: 2, title: "Short 2", duration: "0:30", views: "", category: "Short Form", client: "Luminex", thumbnail: "https://i.ytimg.com/vi/8CMyACDvgiw/hqdefault.jpg", url: "https://www.youtube.com/embed/8CMyACDvgiw", tags: ["Shorts", "Viral"] },
+  { id: 3, title: "Short 3", duration: "0:30", views: "", category: "Short Form", client: "Luminex", thumbnail: "https://i.ytimg.com/vi/c0o1mOpvWHg/hqdefault.jpg", url: "https://www.youtube.com/embed/c0o1mOpvWHg", tags: ["Shorts", "Edit"] },
+  { id: 4, title: "Short 4", duration: "0:30", views: "", category: "Short Form", client: "Luminex", thumbnail: "https://i.ytimg.com/vi/1zwTqSBPJYI/hqdefault.jpg", url: "https://www.youtube.com/embed/1zwTqSBPJYI", tags: ["Shorts", "Motion"] },
+  { id: 5, title: "Short 5", duration: "0:30", views: "", category: "Short Form", client: "Luminex", thumbnail: "https://i.ytimg.com/vi/ayAjLHOl-MQ/hqdefault.jpg", url: "https://www.youtube.com/embed/ayAjLHOl-MQ", tags: ["Shorts", "Visuals"] },
+  { id: 6, title: "Short 6", duration: "0:30", views: "", category: "Short Form", client: "Luminex", thumbnail: "https://i.ytimg.com/vi/Zw52Jgsf_NE/hqdefault.jpg", url: "https://www.youtube.com/embed/Zw52Jgsf_NE", tags: ["Shorts", "Story"] },
   // Long Form
-  { id: 9, title: "Long Form 1", duration: "5:00", views: "", category: "Long Form", client: "Luminex", thumbnail: "https://img.youtube.com/vi/hg98fzJTKh4/maxresdefault.jpg", url: "https://www.youtube.com/embed/hg98fzJTKh4", tags: ["Storytelling", "Cinematic"] },
-  { id: 10, title: "Long Form 2", duration: "8:00", views: "", category: "Long Form", client: "Luminex", thumbnail: "https://img.youtube.com/vi/hxWDYQMgNn0/maxresdefault.jpg", url: "https://www.youtube.com/embed/hxWDYQMgNn0", tags: ["Production", "Edit"] },
-  { id: 11, title: "Long Form 3", duration: "10:00", views: "", category: "Long Form", client: "Luminex", thumbnail: "https://img.youtube.com/vi/IeM04ObtEbA/maxresdefault.jpg", url: "https://www.youtube.com/embed/IeM04ObtEbA", tags: ["Creative", "VFX"] },
-  { id: 12, title: "Long Form 4", duration: "12:00", views: "", category: "Long Form", client: "Luminex", thumbnail: "https://img.youtube.com/vi/L1Eo7fMj-vE/maxresdefault.jpg", url: "https://www.youtube.com/embed/L1Eo7fMj-vE", tags: ["Branding", "Motion"] },
+  { id: 9, title: "Long Form 1", duration: "5:00", views: "", category: "Long Form", client: "Luminex", thumbnail: "https://i.ytimg.com/vi/hg98fzJTKh4/hqdefault.jpg", url: "https://www.youtube.com/embed/hg98fzJTKh4", tags: ["Storytelling", "Cinematic"] },
+  { id: 10, title: "Long Form 2", duration: "8:00", views: "", category: "Long Form", client: "Luminex", thumbnail: "https://i.ytimg.com/vi/hxWDYQMgNn0/hqdefault.jpg", url: "https://www.youtube.com/embed/hxWDYQMgNn0", tags: ["Production", "Edit"] },
+  { id: 11, title: "Long Form 3", duration: "10:00", views: "", category: "Long Form", client: "Luminex", thumbnail: "https://i.ytimg.com/vi/IeM04ObtEbA/hqdefault.jpg", url: "https://www.youtube.com/embed/IeM04ObtEbA", tags: ["Creative", "VFX"] },
+  { id: 12, title: "Long Form 4", duration: "12:00", views: "", category: "Long Form", client: "Luminex", thumbnail: "https://i.ytimg.com/vi/L1Eo7fMj-vE/hqdefault.jpg", url: "https://www.youtube.com/embed/L1Eo7fMj-vE", tags: ["Branding", "Motion"] },
 ];
 
 // Glassmorphic Card Component
@@ -312,13 +312,16 @@ const VideoPortfolioSection = () => {
         {/* Video Modal */}
         <Dialog open={!!selectedVideo} onOpenChange={() => setSelectedVideo(null)}>
           <DialogContent className="max-w-6xl w-full bg-[#1a0b2e] border border-[#c77dff33] backdrop-blur-md p-0 overflow-hidden">
+            <DialogTitle className="sr-only">
+              {selectedVideo?.title || "Video Player"}
+            </DialogTitle>
             {selectedVideo && (
               <div className="relative aspect-video bg-black">
                 <iframe
-                  src={`${selectedVideo.url}?autoplay=1`}
+                  src={`${selectedVideo.url}?autoplay=1&rel=0&modestbranding=1`}
                   title={selectedVideo.title}
                   className="w-full h-full border-0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowFullScreen
                 ></iframe>
               </div>
