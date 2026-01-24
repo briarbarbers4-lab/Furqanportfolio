@@ -21,6 +21,13 @@ export function ContactForm() {
   });
 
   function onSubmit(data: InsertMessage) {
+    // Construct email link with pre-filled content
+    const subject = `New Message from ${data.name}`;
+    const body = `Name: ${data.name}\nEmail: ${data.email}\n\nMessage:\n${data.message}`;
+    const mailtoUrl = `mailto:furqan@luminexsocial.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    
+    window.location.href = mailtoUrl;
+    
     sendMessage(data, {
       onSuccess: () => {
         form.reset();

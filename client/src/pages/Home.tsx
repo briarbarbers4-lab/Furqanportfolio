@@ -32,19 +32,15 @@ const videoProjects = [
   { id: 4, title: "Brand Story Teaser", duration: "0:15", views: "", category: "Short Form", client: "Social Media", thumbnail: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=400&h=225&fit=crop", tags: ["Motion Graphics"] },
   { id: 5, title: "Trending Audio Edit", duration: "0:25", views: "", category: "Short Form", client: "TikTok", thumbnail: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=225&fit=crop", tags: ["Sound Design", "VFX"] },
   { id: 6, title: "Daily Vlog Highlight", duration: "0:40", views: "", category: "Short Form", client: "Instagram", thumbnail: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&h=225&fit=crop", tags: ["Color Grading"] },
-  { id: 7, title: "Product Demo Loop", duration: "0:20", views: "", category: "Short Form", client: "Twitter", thumbnail: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=225&fit=crop", tags: ["Motion Graphics", "2D Animation"] },
   // Long Form
   { id: 9, title: "Brand Documentary", duration: "8:45", views: "", category: "Long Form", client: "Fortune 500", thumbnail: "https://images.unsplash.com/photo-1489599735734-79b4dfe3b22a?w=400&h=225&fit=crop", tags: ["Color Grading", "Sound Design"] },
   { id: 10, title: "Company Culture Video", duration: "5:20", views: "", category: "Long Form", client: "Corporate", thumbnail: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=225&fit=crop", tags: ["Motion Graphics", "VFX"] },
   { id: 11, title: "Creative Process Breakdown", duration: "12:30", views: "", category: "Long Form", client: "YouTube", thumbnail: "https://images.unsplash.com/photo-1492691527719-9d1e07eab495?w=400&h=225&fit=crop", tags: ["2D Animation", "Color Grading"] },
   { id: 12, title: "Client Success Story", duration: "6:15", views: "", category: "Long Form", client: "Case Study", thumbnail: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=400&h=225&fit=crop", tags: ["Motion Graphics", "Sound Design"] },
-  { id: 13, title: "Advanced Color Grading", duration: "15:00", views: "", category: "Long Form", client: "Education", thumbnail: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=225&fit=crop", tags: ["Color Grading", "VFX"] },
-  { id: 14, title: "Event Coverage Highlight", duration: "10:30", views: "", category: "Long Form", client: "Corporate", thumbnail: "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=400&h=225&fit=crop", tags: ["Motion Graphics"] },
-  { id: 15, title: "Interview Series", duration: "7:45", views: "", category: "Long Form", client: "Podcast", thumbnail: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=225&fit=crop", tags: ["Sound Design", "Color Grading"] },
 ];
 
 // Glassmorphic Card Component
-const GlassCard = ({ children, className = "" }) => {
+const GlassCard = ({ children, className = "" }: { children: React.ReactNode, className?: string }) => {
   return (
     <motion.div
       className={`bg-[#4a1a7f1a] backdrop-blur-md border border-[#c77dff33] rounded-3xl shadow-2xl ${className}`}
@@ -57,7 +53,7 @@ const GlassCard = ({ children, className = "" }) => {
 };
 
 // Glassmorphic Badge Component
-const GlassBadge = ({ children, className = "" }) => {
+const GlassBadge = ({ children, className = "" }: { children: React.ReactNode, className?: string }) => {
   return (
     <motion.span
       className={`inline-block px-4 py-2 bg-[#4a1a7f1a] backdrop-blur-sm border border-[#c77dff33] rounded-full text-sm text-white ${className}`}
@@ -100,103 +96,20 @@ const FloatingHeader = () => {
   );
 };
 
-// Hero Section with Demo Reel
+// Hero Section
 const HeroSection = () => {
   return (
     <section id="home" className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden px-4 py-20">
-      <div className="container mx-auto text-center relative z-10 space-y-16">
-        {/* Demo Reel Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="w-full max-w-4xl mx-auto"
-        >
-          <motion.h2
-            className="text-5xl md:text-6xl font-bold text-white mb-4 font-sans tracking-tight"
-            style={{ fontSize: '64px' }}
-            animate={{
-              textShadow: [
-                "0 0 10px rgba(199, 125, 255, 0.5)",
-                "0 0 20px rgba(199, 125, 255, 0.8)",
-                "0 0 10px rgba(199, 125, 255, 0.5)"
-              ]
-            }}
-            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-          >
-            2025 SHOWREEL
-          </motion.h2>
-          <motion.p
-            className="text-2xl md:text-3xl text-[#c77dff] mb-8 font-allura"
-            style={{ fontSize: '28px' }}
-          >
-            60 Seconds of Excellence
-          </motion.p>
-
-          {/* Video Player Container */}
-          <GlassCard className="w-full max-w-4xl mx-auto p-4 relative overflow-hidden">
-            <motion.div
-              className="relative w-full aspect-video bg-gradient-to-br from-[#1a0b2e] to-[#0b0d12] rounded-2xl overflow-hidden"
-              animate={{
-                boxShadow: [
-                  "0 0 20px rgba(157, 78, 221, 0.3)",
-                  "0 0 40px rgba(157, 78, 221, 0.6)",
-                  "0 0 20px rgba(157, 78, 221, 0.3)"
-                ]
-              }}
-              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-            >
-              {/* Video Thumbnail Placeholder */}
-              <img
-                src="https://images.unsplash.com/photo-1492691527719-9d1e07eab495?w=1200&h=675&fit=crop"
-                alt="Showreel Thumbnail"
-                className="w-full h-full object-cover"
-              />
-              {/* Play Button Overlay */}
-              <motion.div
-                className="absolute inset-0 flex items-center justify-center"
-                whileHover={{ scale: 1.05 }}
-              >
-                <motion.button
-                  className="w-24 h-24 bg-gradient-to-r from-[#9d4edd] to-[#7b2cbf] rounded-full flex items-center justify-center shadow-2xl"
-                  animate={{
-                    scale: [1, 1.1, 1],
-                    boxShadow: [
-                      "0 0 20px rgba(157, 78, 221, 0.5)",
-                      "0 0 40px rgba(157, 78, 221, 0.8)",
-                      "0 0 20px rgba(157, 78, 221, 0.5)"
-                    ]
-                  }}
-                  transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-                >
-                  <Play size={40} className="text-white ml-1" />
-                </motion.button>
-              </motion.div>
-              {/* Gradient Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-            </motion.div>
-          </GlassCard>
-
-          <motion.p
-            className="text-lg text-[#e0e0e0] mt-6 font-inter"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.5, duration: 0.8 }}
-          >
-            50+ Projects | 10M+ Views | Award-Winning Editor
-          </motion.p>
-        </motion.div>
-
+      <div className="container mx-auto text-center relative z-10 space-y-12">
         {/* Hero Headline Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
+          transition={{ duration: 0.8 }}
           className="space-y-8"
         >
           <motion.h1
-            className="text-6xl md:text-7xl font-bold text-white font-sans tracking-tight"
-            style={{ fontSize: '72px' }}
+            className="text-6xl md:text-8xl font-bold text-white font-sans tracking-tight"
             whileHover={{
               background: "linear-gradient(45deg, #9d4edd, #c77dff, #7b2cbf)",
               backgroundClip: "text",
@@ -208,7 +121,7 @@ const HeroSection = () => {
             Muhammad Furqan Shahid
           </motion.h1>
           <motion.p
-            className="text-2xl md:text-3xl text-[#c77dff] font-allura"
+            className="text-3xl md:text-4xl text-[#c77dff] font-allura"
             animate={{
               textShadow: [
                 "0 0 10px rgba(199, 125, 255, 0.5)",
@@ -220,26 +133,54 @@ const HeroSection = () => {
           >
             CEO & Creative Director | Crafting Visual Stories
           </motion.p>
-          <div className="max-w-4xl mx-auto space-y-4 text-lg md:text-xl text-[#e0e0e0] font-inter leading-relaxed">
+          <div className="max-w-4xl mx-auto space-y-6 text-xl md:text-2xl text-[#e0e0e0] font-inter leading-relaxed">
             <p>
-              With over a decade of experience in video production and editing, I specialize in transforming raw footage into compelling visual narratives that captivate audiences and drive results.
+              Transforming raw footage into compelling visual narratives with over 3 years of expertise.
             </p>
             <p>
-              From high-energy commercials to intimate documentaries, my work spans across industries, delivering cinematic quality that elevates brands and tells unforgettable stories.
-            </p>
-            <p>
-              Let's collaborate to bring your vision to life with cutting-edge editing techniques and creative storytelling.
+              Specializing in cinematic editing that elevates brands and tells unforgettable stories across 100+ global projects.
             </p>
           </div>
 
-          <ScrollLink to="portfolio" smooth={true} duration={800} offset={-80}>
-            <Button
-              size="lg"
-              className="bg-gradient-to-r from-[#9d4edd] to-[#7b2cbf] text-white px-8 py-4 rounded-full font-semibold hover:from-[#7b2cbf] hover:to-[#9d4edd] transition-all hover:shadow-lg hover:shadow-[#9d4edd]/30"
-            >
-              View My Portfolio
-            </Button>
-          </ScrollLink>
+          <div className="flex flex-wrap justify-center gap-6 pt-4">
+            <ScrollLink to="portfolio" smooth={true} duration={800} offset={-80}>
+              <Button
+                size="lg"
+                className="bg-gradient-to-r from-[#9d4edd] to-[#7b2cbf] text-white px-10 py-6 rounded-full font-bold text-lg hover:from-[#7b2cbf] hover:to-[#9d4edd] transition-all hover:shadow-xl hover:shadow-[#9d4edd]/40"
+              >
+                Explore Work
+              </Button>
+            </ScrollLink>
+            <ScrollLink to="contact" smooth={true} duration={800} offset={-80}>
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-[#c77dff] text-[#c77dff] hover:bg-[#c77dff]/10 px-10 py-6 rounded-full font-bold text-lg transition-all"
+              >
+                Get In Touch
+              </Button>
+            </ScrollLink>
+          </div>
+
+          <motion.div
+            className="pt-12 flex justify-center gap-12 text-[#c77dff]/60"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1 }}
+          >
+            <div className="text-center">
+              <p className="text-3xl font-bold text-white">3+</p>
+              <p className="text-sm uppercase tracking-widest">Years</p>
+            </div>
+            <div className="text-center">
+              <p className="text-3xl font-bold text-white">100+</p>
+              <p className="text-sm uppercase tracking-widest">Projects</p>
+            </div>
+            <div className="text-center">
+              <p className="text-3xl font-bold text-white">15+</p>
+              <p className="text-sm uppercase tracking-widest">Clients</p>
+            </div>
+          </motion.div>
         </motion.div>
       </div>
     </section>
@@ -251,7 +192,7 @@ const VideoPortfolioSection = () => {
   const [selectedCategory, setSelectedCategory] = useState("All Work");
   const [selectedVideo, setSelectedVideo] = useState<Video | null>(null);
 
-  const categories = ["All Work", "Short Form", "Long Form", "Commercials", "Music Videos", "Corporate"];
+  const categories = ["All Work", "Short Form", "Long Form"];
 
   const filteredVideos = selectedCategory === "All Work"
     ? videoProjects
@@ -400,10 +341,9 @@ const VideoPortfolioSection = () => {
 // Stats Counter Section
 const StatsSection = () => {
   const stats = [
-    { number: "10+", label: "Years Experience" },
-    { number: "150+", label: "Projects Completed" },
-    { number: "50+", label: "Global Clients" },
-    { number: "25+", label: "Industry Awards" },
+    { number: "3+", label: "Years Experience" },
+    { number: "100+", label: "Projects Completed" },
+    { number: "15+", label: "Global Clients" },
   ];
 
   return (
@@ -838,7 +778,7 @@ const ContactSection = () => {
               </div>
               <div>
                 <p className="text-[#e0e0e0] text-sm font-inter">Email</p>
-                <p className="text-white font-medium">hello@furqanshahid.com</p>
+                <p className="text-white font-medium">furqan@luminexsocial.com</p>
               </div>
             </div>
 
@@ -848,7 +788,7 @@ const ContactSection = () => {
               </div>
               <div>
                 <p className="text-[#e0e0e0] text-sm font-inter">Phone</p>
-                <p className="text-white font-medium">+92 300 1234567</p>
+                <p className="text-white font-medium">+92 3325058773</p>
               </div>
             </div>
 
@@ -858,7 +798,7 @@ const ContactSection = () => {
               </div>
               <div>
                 <p className="text-[#e0e0e0] text-sm font-inter">Location</p>
-                <p className="text-white font-medium">Lahore, Pakistan</p>
+                <p className="text-white font-medium">Islamabad, Pakistan</p>
               </div>
             </div>
 
@@ -955,7 +895,6 @@ export default function Home() {
         <VideoPortfolioSection />
         <StatsSection />
         <SkillsSection />
-        <TestimonialsSection />
         <ContactSection />
       </main>
 
