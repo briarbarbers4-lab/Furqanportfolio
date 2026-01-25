@@ -33,7 +33,7 @@ const videoProjects = [
     views: "", 
     category: "Short Form", 
     client: "Luminex", 
-    thumbnail: "https://ik.imagekit.io/luminexsocial/Short%20Form/Untitled%20V2_2.mp4/ik-thumbnail.jpg", 
+    thumbnail: "https://ik.imagekit.io/luminexsocial/Short%20Form/Untitled%20V2_2.mp4?tr=f-jpg,w-400,h-600,so-1", 
     url: "https://ik.imagekit.io/luminexsocial/Short%20Form/Untitled%20V2_2.mp4", 
     tags: ["Shorts", "Creative"] 
   },
@@ -44,7 +44,7 @@ const videoProjects = [
     views: "", 
     category: "Short Form", 
     client: "Luminex", 
-    thumbnail: "https://ik.imagekit.io/luminexsocial/Short%20Form/Quality%20Audience%20V6.mp4/ik-thumbnail.jpg", 
+    thumbnail: "https://ik.imagekit.io/luminexsocial/Short%20Form/Quality%20Audience%20V6.mp4?tr=f-jpg,w-400,h-600,so-1", 
     url: "https://ik.imagekit.io/luminexsocial/Short%20Form/Quality%20Audience%20V6.mp4", 
     tags: ["Shorts", "Viral"] 
   },
@@ -55,7 +55,7 @@ const videoProjects = [
     views: "", 
     category: "Short Form", 
     client: "Luminex", 
-    thumbnail: "https://ik.imagekit.io/luminexsocial/Short%20Form/Strategy%20For%20LinkedIn%20Growth%20V1.mp4/ik-thumbnail.jpg", 
+    thumbnail: "https://ik.imagekit.io/luminexsocial/Short%20Form/Strategy%20For%20LinkedIn%20Growth%20V1.mp4?tr=f-jpg,w-400,h-600,so-1", 
     url: "https://ik.imagekit.io/luminexsocial/Short%20Form/Strategy%20For%20LinkedIn%20Growth%20V1.mp4", 
     tags: ["Shorts", "Edit"] 
   },
@@ -66,7 +66,7 @@ const videoProjects = [
     views: "", 
     category: "Short Form", 
     client: "Luminex", 
-    thumbnail: "https://ik.imagekit.io/luminexsocial/Short%20Form/SubMagic%20V3.mp4/ik-thumbnail.jpg", 
+    thumbnail: "https://ik.imagekit.io/luminexsocial/Short%20Form/SubMagic%20V3.mp4?tr=f-jpg,w-400,h-600,so-1", 
     url: "https://ik.imagekit.io/luminexsocial/Short%20Form/SubMagic%20V3.mp4", 
     tags: ["Shorts", "Motion"] 
   },
@@ -77,7 +77,7 @@ const videoProjects = [
     views: "", 
     category: "Short Form", 
     client: "Luminex", 
-    thumbnail: "https://ik.imagekit.io/luminexsocial/Short%20Form/Pinikio%20V2.mp4/ik-thumbnail.jpg", 
+    thumbnail: "https://ik.imagekit.io/luminexsocial/Short%20Form/Pinikio%20V2.mp4?tr=f-jpg,w-400,h-600,so-1", 
     url: "https://ik.imagekit.io/luminexsocial/Short%20Form/Pinikio%20V2.mp4", 
     tags: ["Shorts", "Visuals"] 
   },
@@ -88,7 +88,7 @@ const videoProjects = [
     views: "", 
     category: "Short Form", 
     client: "Luminex", 
-    thumbnail: "https://ik.imagekit.io/luminexsocial/Short%20Form/Marketing%20V2.mp4/ik-thumbnail.jpg", 
+    thumbnail: "https://ik.imagekit.io/luminexsocial/Short%20Form/Marketing%20V2.mp4?tr=f-jpg,w-400,h-600,so-1", 
     url: "https://ik.imagekit.io/luminexsocial/Short%20Form/Marketing%20V2.mp4", 
     tags: ["Shorts", "Story"] 
   },
@@ -100,7 +100,7 @@ const videoProjects = [
     views: "", 
     category: "Long Form", 
     client: "Luminex", 
-    thumbnail: "https://ik.imagekit.io/luminexsocial/Long%20form/Pre%20Call%20Video%20V2.mp4/ik-thumbnail.jpg", 
+    thumbnail: "https://ik.imagekit.io/luminexsocial/Long%20form/Pre%20Call%20Video%20V2.mp4?tr=f-jpg,w-800,h-450,so-1", 
     url: "https://ik.imagekit.io/luminexsocial/Long%20form/Pre%20Call%20Video%20V2.mp4", 
     tags: ["Storytelling", "Cinematic"] 
   },
@@ -111,7 +111,7 @@ const videoProjects = [
     views: "", 
     category: "Long Form", 
     client: "Luminex", 
-    thumbnail: "https://ik.imagekit.io/luminexsocial/Long%20form/Intro.mp4/ik-thumbnail.jpg", 
+    thumbnail: "https://ik.imagekit.io/luminexsocial/Long%20form/Intro.mp4?tr=f-jpg,w-800,h-450,so-1", 
     url: "https://ik.imagekit.io/luminexsocial/Long%20form/Intro.mp4", 
     tags: ["Production", "Edit"] 
   },
@@ -122,7 +122,7 @@ const videoProjects = [
     views: "", 
     category: "Long Form", 
     client: "Luminex", 
-    thumbnail: "https://ik.imagekit.io/luminexsocial/Long%20form/start%20your%20summer%20arc%20in%203%20minutes%20%20%20OnPointFresh%201080p,%20h264.mp4/ik-thumbnail.jpg", 
+    thumbnail: "https://ik.imagekit.io/luminexsocial/Long%20form/start%20your%20summer%20arc%20in%203%20minutes%20%20%20OnPointFresh%201080p,%20h264.mp4?tr=f-jpg,w-800,h-450,so-1", 
     url: "https://ik.imagekit.io/luminexsocial/Long%20form/start%20your%20summer%20arc%20in%203%20minutes%20%20%20OnPointFresh%201080p,%20h264.mp4", 
     tags: ["Creative", "VFX"] 
   },
@@ -133,7 +133,7 @@ const videoProjects = [
     views: "", 
     category: "Long Form", 
     client: "Luminex", 
-    thumbnail: "https://ik.imagekit.io/luminexsocial/Long%20form/Precision%20Closer.mp4/ik-thumbnail.jpg", 
+    thumbnail: "https://ik.imagekit.io/luminexsocial/Long%20form/Precision%20Closer.mp4?tr=f-jpg,w-800,h-450,so-1", 
     url: "https://ik.imagekit.io/luminexsocial/Long%20form/Precision%20Closer.mp4", 
     tags: ["Branding", "Motion"] 
   },
@@ -418,12 +418,13 @@ const VideoPortfolioSection = () => {
             {selectedVideo && (
               <div className="relative aspect-video bg-black flex items-center justify-center">
                 <video
-                  src={selectedVideo.url}
+                  key={selectedVideo.url}
                   className="w-full h-full max-h-[80vh]"
                   controls
                   autoPlay
                   playsInline
                 >
+                  <source src={selectedVideo.url} type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               </div>
