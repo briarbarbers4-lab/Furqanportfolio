@@ -26,17 +26,17 @@ interface Video {
 // Video Data
 const videoProjects = [
   // Short Form
-  { id: 1, title: "Short 1", duration: "0:30", views: "", category: "Short Form", client: "Luminex", thumbnail: "https://i.ytimg.com/vi/1KTLmD7okxY/hqdefault.jpg", url: "https://www.youtube.com/embed/1KTLmD7okxY", tags: ["Shorts", "Creative"] },
-  { id: 2, title: "Short 2", duration: "0:30", views: "", category: "Short Form", client: "Luminex", thumbnail: "https://i.ytimg.com/vi/8CMyACDvgiw/hqdefault.jpg", url: "https://www.youtube.com/embed/8CMyACDvgiw", tags: ["Shorts", "Viral"] },
-  { id: 3, title: "Short 3", duration: "0:30", views: "", category: "Short Form", client: "Luminex", thumbnail: "https://i.ytimg.com/vi/c0o1mOpvWHg/hqdefault.jpg", url: "https://www.youtube.com/embed/c0o1mOpvWHg", tags: ["Shorts", "Edit"] },
-  { id: 4, title: "Short 4", duration: "0:30", views: "", category: "Short Form", client: "Luminex", thumbnail: "https://i.ytimg.com/vi/1zwTqSBPJYI/hqdefault.jpg", url: "https://www.youtube.com/embed/1zwTqSBPJYI", tags: ["Shorts", "Motion"] },
-  { id: 5, title: "Short 5", duration: "0:30", views: "", category: "Short Form", client: "Luminex", thumbnail: "https://i.ytimg.com/vi/ayAjLHOl-MQ/hqdefault.jpg", url: "https://www.youtube.com/embed/ayAjLHOl-MQ", tags: ["Shorts", "Visuals"] },
-  { id: 6, title: "Short 6", duration: "0:30", views: "", category: "Short Form", client: "Luminex", thumbnail: "https://i.ytimg.com/vi/Zw52Jgsf_NE/hqdefault.jpg", url: "https://www.youtube.com/embed/Zw52Jgsf_NE", tags: ["Shorts", "Story"] },
+  { id: 1, title: "Short 1", duration: "0:30", views: "", category: "Short Form", client: "Luminex", thumbnail: "//i.ytimg.com/vi/1KTLmD7okxY/hqdefault.jpg", url: "https://www.youtube.com/embed/1KTLmD7okxY", tags: ["Shorts", "Creative"] },
+  { id: 2, title: "Short 2", duration: "0:30", views: "", category: "Short Form", client: "Luminex", thumbnail: "//i.ytimg.com/vi/8CMyACDvgiw/hqdefault.jpg", url: "https://www.youtube.com/embed/8CMyACDvgiw", tags: ["Shorts", "Viral"] },
+  { id: 3, title: "Short 3", duration: "0:30", views: "", category: "Short Form", client: "Luminex", thumbnail: "//i.ytimg.com/vi/c0o1mOpvWHg/hqdefault.jpg", url: "https://www.youtube.com/embed/c0o1mOpvWHg", tags: ["Shorts", "Edit"] },
+  { id: 4, title: "Short 4", duration: "0:30", views: "", category: "Short Form", client: "Luminex", thumbnail: "//i.ytimg.com/vi/1zwTqSBPJYI/hqdefault.jpg", url: "https://www.youtube.com/embed/1zwTqSBPJYI", tags: ["Shorts", "Motion"] },
+  { id: 5, title: "Short 5", duration: "0:30", views: "", category: "Short Form", client: "Luminex", thumbnail: "//i.ytimg.com/vi/ayAjLHOl-MQ/hqdefault.jpg", url: "https://www.youtube.com/embed/ayAjLHOl-MQ", tags: ["Shorts", "Visuals"] },
+  { id: 6, title: "Short 6", duration: "0:30", views: "", category: "Short Form", client: "Luminex", thumbnail: "//i.ytimg.com/vi/Zw52Jgsf_NE/hqdefault.jpg", url: "https://www.youtube.com/embed/Zw52Jgsf_NE", tags: ["Shorts", "Story"] },
   // Long Form
-  { id: 9, title: "Long Form 1", duration: "5:00", views: "", category: "Long Form", client: "Luminex", thumbnail: "https://i.ytimg.com/vi/hg98fzJTKh4/hqdefault.jpg", url: "https://www.youtube.com/embed/hg98fzJTKh4", tags: ["Storytelling", "Cinematic"] },
-  { id: 10, title: "Long Form 2", duration: "8:00", views: "", category: "Long Form", client: "Luminex", thumbnail: "https://i.ytimg.com/vi/hxWDYQMgNn0/hqdefault.jpg", url: "https://www.youtube.com/embed/hxWDYQMgNn0", tags: ["Production", "Edit"] },
-  { id: 11, title: "Long Form 3", duration: "10:00", views: "", category: "Long Form", client: "Luminex", thumbnail: "https://i.ytimg.com/vi/IeM04ObtEbA/hqdefault.jpg", url: "https://www.youtube.com/embed/IeM04ObtEbA", tags: ["Creative", "VFX"] },
-  { id: 12, title: "Long Form 4", duration: "12:00", views: "", category: "Long Form", client: "Luminex", thumbnail: "https://i.ytimg.com/vi/L1Eo7fMj-vE/hqdefault.jpg", url: "https://www.youtube.com/embed/L1Eo7fMj-vE", tags: ["Branding", "Motion"] },
+  { id: 9, title: "Long Form 1", duration: "5:00", views: "", category: "Long Form", client: "Luminex", thumbnail: "//i.ytimg.com/vi/hg98fzJTKh4/hqdefault.jpg", url: "https://www.youtube.com/embed/hg98fzJTKh4", tags: ["Storytelling", "Cinematic"] },
+  { id: 10, title: "Long Form 2", duration: "8:00", views: "", category: "Long Form", client: "Luminex", thumbnail: "//i.ytimg.com/vi/hxWDYQMgNn0/hqdefault.jpg", url: "https://www.youtube.com/embed/hxWDYQMgNn0", tags: ["Production", "Edit"] },
+  { id: 11, title: "Long Form 3", duration: "10:00", views: "", category: "Long Form", client: "Luminex", thumbnail: "//i.ytimg.com/vi/IeM04ObtEbA/hqdefault.jpg", url: "https://www.youtube.com/embed/IeM04ObtEbA", tags: ["Creative", "VFX"] },
+  { id: 12, title: "Long Form 4", duration: "12:00", views: "", category: "Long Form", client: "Luminex", thumbnail: "//i.ytimg.com/vi/L1Eo7fMj-vE/hqdefault.jpg", url: "https://www.youtube.com/embed/L1Eo7fMj-vE", tags: ["Branding", "Motion"] },
 ];
 
 // Glassmorphic Card Component
