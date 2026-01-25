@@ -26,17 +26,117 @@ interface Video {
 // Video Data
 const videoProjects = [
   // Short Form
-  { id: 1, title: "Short 1", duration: "0:30", views: "", category: "Short Form", client: "Luminex", thumbnail: "https://img.youtube.com/vi/1KTLmD7okxY/maxresdefault.jpg", url: "https://www.youtube.com/embed/1KTLmD7okxY", tags: ["Shorts", "Creative"] },
-  { id: 2, title: "Short 2", duration: "0:30", views: "", category: "Short Form", client: "Luminex", thumbnail: "https://img.youtube.com/vi/8CMyACDvgiw/maxresdefault.jpg", url: "https://www.youtube.com/embed/8CMyACDvgiw", tags: ["Shorts", "Viral"] },
-  { id: 3, title: "Short 3", duration: "0:30", views: "", category: "Short Form", client: "Luminex", thumbnail: "https://img.youtube.com/vi/c0o1mOpvWHg/maxresdefault.jpg", url: "https://www.youtube.com/embed/c0o1mOpvWHg", tags: ["Shorts", "Edit"] },
-  { id: 4, title: "Short 4", duration: "0:30", views: "", category: "Short Form", client: "Luminex", thumbnail: "https://img.youtube.com/vi/1zwTqSBPJYI/maxresdefault.jpg", url: "https://www.youtube.com/embed/1zwTqSBPJYI", tags: ["Shorts", "Motion"] },
-  { id: 5, title: "Short 5", duration: "0:30", views: "", category: "Short Form", client: "Luminex", thumbnail: "https://img.youtube.com/vi/ayAjLHOl-MQ/maxresdefault.jpg", url: "https://www.youtube.com/embed/ayAjLHOl-MQ", tags: ["Shorts", "Visuals"] },
-  { id: 6, title: "Short 6", duration: "0:30", views: "", category: "Short Form", client: "Luminex", thumbnail: "https://img.youtube.com/vi/Zw52Jgsf_NE/maxresdefault.jpg", url: "https://www.youtube.com/embed/Zw52Jgsf_NE", tags: ["Shorts", "Story"] },
+  { 
+    id: 1, 
+    title: "Untitled V2", 
+    duration: "0:30", 
+    views: "", 
+    category: "Short Form", 
+    client: "Luminex", 
+    thumbnail: "https://ik.imagekit.io/luminexsocial/Short%20Form/Untitled%20V2_2.mp4/ik-thumbnail.jpg", 
+    url: "https://ik.imagekit.io/luminexsocial/Short%20Form/Untitled%20V2_2.mp4", 
+    tags: ["Shorts", "Creative"] 
+  },
+  { 
+    id: 2, 
+    title: "Quality Audience", 
+    duration: "0:30", 
+    views: "", 
+    category: "Short Form", 
+    client: "Luminex", 
+    thumbnail: "https://ik.imagekit.io/luminexsocial/Short%20Form/Quality%20Audience%20V6.mp4/ik-thumbnail.jpg", 
+    url: "https://ik.imagekit.io/luminexsocial/Short%20Form/Quality%20Audience%20V6.mp4", 
+    tags: ["Shorts", "Viral"] 
+  },
+  { 
+    id: 3, 
+    title: "LinkedIn Growth", 
+    duration: "0:30", 
+    views: "", 
+    category: "Short Form", 
+    client: "Luminex", 
+    thumbnail: "https://ik.imagekit.io/luminexsocial/Short%20Form/Strategy%20For%20LinkedIn%20Growth%20V1.mp4/ik-thumbnail.jpg", 
+    url: "https://ik.imagekit.io/luminexsocial/Short%20Form/Strategy%20For%20LinkedIn%20Growth%20V1.mp4", 
+    tags: ["Shorts", "Edit"] 
+  },
+  { 
+    id: 4, 
+    title: "SubMagic", 
+    duration: "0:30", 
+    views: "", 
+    category: "Short Form", 
+    client: "Luminex", 
+    thumbnail: "https://ik.imagekit.io/luminexsocial/Short%20Form/SubMagic%20V3.mp4/ik-thumbnail.jpg", 
+    url: "https://ik.imagekit.io/luminexsocial/Short%20Form/SubMagic%20V3.mp4", 
+    tags: ["Shorts", "Motion"] 
+  },
+  { 
+    id: 5, 
+    title: "Pinikio", 
+    duration: "0:30", 
+    views: "", 
+    category: "Short Form", 
+    client: "Luminex", 
+    thumbnail: "https://ik.imagekit.io/luminexsocial/Short%20Form/Pinikio%20V2.mp4/ik-thumbnail.jpg", 
+    url: "https://ik.imagekit.io/luminexsocial/Short%20Form/Pinikio%20V2.mp4", 
+    tags: ["Shorts", "Visuals"] 
+  },
+  { 
+    id: 6, 
+    title: "Marketing", 
+    duration: "0:30", 
+    views: "", 
+    category: "Short Form", 
+    client: "Luminex", 
+    thumbnail: "https://ik.imagekit.io/luminexsocial/Short%20Form/Marketing%20V2.mp4/ik-thumbnail.jpg", 
+    url: "https://ik.imagekit.io/luminexsocial/Short%20Form/Marketing%20V2.mp4", 
+    tags: ["Shorts", "Story"] 
+  },
   // Long Form
-  { id: 9, title: "Long Form 1", duration: "5:00", views: "", category: "Long Form", client: "Luminex", thumbnail: "https://img.youtube.com/vi/hg98fzJTKh4/maxresdefault.jpg", url: "https://www.youtube.com/embed/hg98fzJTKh4", tags: ["Storytelling", "Cinematic"] },
-  { id: 10, title: "Long Form 2", duration: "8:00", views: "", category: "Long Form", client: "Luminex", thumbnail: "https://img.youtube.com/vi/hxWDYQMgNn0/maxresdefault.jpg", url: "https://www.youtube.com/embed/hxWDYQMgNn0", tags: ["Production", "Edit"] },
-  { id: 11, title: "Long Form 3", duration: "10:00", views: "", category: "Long Form", client: "Luminex", thumbnail: "https://img.youtube.com/vi/IeM04ObtEbA/maxresdefault.jpg", url: "https://www.youtube.com/embed/IeM04ObtEbA", tags: ["Creative", "VFX"] },
-  { id: 12, title: "Long Form 4", duration: "12:00", views: "", category: "Long Form", client: "Luminex", thumbnail: "https://img.youtube.com/vi/L1Eo7fMj-vE/maxresdefault.jpg", url: "https://www.youtube.com/embed/L1Eo7fMj-vE", tags: ["Branding", "Motion"] },
+  { 
+    id: 9, 
+    title: "Pre Call Video", 
+    duration: "5:00", 
+    views: "", 
+    category: "Long Form", 
+    client: "Luminex", 
+    thumbnail: "https://ik.imagekit.io/luminexsocial/Long%20form/Pre%20Call%20Video%20V2.mp4/ik-thumbnail.jpg", 
+    url: "https://ik.imagekit.io/luminexsocial/Long%20form/Pre%20Call%20Video%20V2.mp4", 
+    tags: ["Storytelling", "Cinematic"] 
+  },
+  { 
+    id: 10, 
+    title: "Intro", 
+    duration: "8:00", 
+    views: "", 
+    category: "Long Form", 
+    client: "Luminex", 
+    thumbnail: "https://ik.imagekit.io/luminexsocial/Long%20form/Intro.mp4/ik-thumbnail.jpg", 
+    url: "https://ik.imagekit.io/luminexsocial/Long%20form/Intro.mp4", 
+    tags: ["Production", "Edit"] 
+  },
+  { 
+    id: 11, 
+    title: "Summer Arc", 
+    duration: "10:00", 
+    views: "", 
+    category: "Long Form", 
+    client: "Luminex", 
+    thumbnail: "https://ik.imagekit.io/luminexsocial/Long%20form/start%20your%20summer%20arc%20in%203%20minutes%20%20%20OnPointFresh%201080p,%20h264.mp4/ik-thumbnail.jpg", 
+    url: "https://ik.imagekit.io/luminexsocial/Long%20form/start%20your%20summer%20arc%20in%203%20minutes%20%20%20OnPointFresh%201080p,%20h264.mp4", 
+    tags: ["Creative", "VFX"] 
+  },
+  { 
+    id: 12, 
+    title: "Precision Closer", 
+    duration: "12:00", 
+    views: "", 
+    category: "Long Form", 
+    client: "Luminex", 
+    thumbnail: "https://ik.imagekit.io/luminexsocial/Long%20form/Precision%20Closer.mp4/ik-thumbnail.jpg", 
+    url: "https://ik.imagekit.io/luminexsocial/Long%20form/Precision%20Closer.mp4", 
+    tags: ["Branding", "Motion"] 
+  },
 ];
 
 // Glassmorphic Card Component
@@ -316,14 +416,16 @@ const VideoPortfolioSection = () => {
               {selectedVideo?.title || "Video Player"}
             </DialogTitle>
             {selectedVideo && (
-              <div className="relative aspect-video bg-black">
-                <iframe
-                  src={`${selectedVideo.url}?autoplay=1&rel=0&modestbranding=1`}
-                  title={selectedVideo.title}
-                  className="w-full h-full border-0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                ></iframe>
+              <div className="relative aspect-video bg-black flex items-center justify-center">
+                <video
+                  src={selectedVideo.url}
+                  className="w-full h-full max-h-[80vh]"
+                  controls
+                  autoPlay
+                  playsInline
+                >
+                  Your browser does not support the video tag.
+                </video>
               </div>
             )}
           </DialogContent>
