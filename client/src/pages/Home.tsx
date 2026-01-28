@@ -28,113 +28,113 @@ const videoProjects = [
   // Short Form
   { 
     id: 1, 
-    title: "Untitled V2", 
+    title: "Short 1", 
     duration: "0:30", 
     views: "", 
     category: "Short Form", 
     client: "Luminex", 
-    thumbnail: "https://ik.imagekit.io/luminexsocial/Short%20Form/Untitled%20V2_2.mp4?tr=f-jpg,w-400,h-600,so-1", 
-    url: "https://ik.imagekit.io/luminexsocial/Short%20Form/Untitled%20V2_2.mp4", 
+    thumbnail: "https://img.youtube.com/vi/iSsuDui9ztU/maxresdefault.jpg", 
+    url: "https://www.youtube.com/embed/iSsuDui9ztU", 
     tags: ["Shorts", "Creative"] 
   },
   { 
     id: 2, 
-    title: "Quality Audience", 
+    title: "Short 2", 
     duration: "0:30", 
     views: "", 
     category: "Short Form", 
     client: "Luminex", 
-    thumbnail: "https://ik.imagekit.io/luminexsocial/Short%20Form/Quality%20Audience%20V6.mp4?tr=f-jpg,w-400,h-600,so-1", 
-    url: "https://ik.imagekit.io/luminexsocial/Short%20Form/Quality%20Audience%20V6.mp4", 
+    thumbnail: "https://img.youtube.com/vi/NlDgJn20OLA/maxresdefault.jpg", 
+    url: "https://www.youtube.com/embed/NlDgJn20OLA", 
     tags: ["Shorts", "Viral"] 
   },
   { 
     id: 3, 
-    title: "LinkedIn Growth", 
+    title: "Short 3", 
     duration: "0:30", 
     views: "", 
     category: "Short Form", 
     client: "Luminex", 
-    thumbnail: "https://ik.imagekit.io/luminexsocial/Short%20Form/Strategy%20For%20LinkedIn%20Growth%20V1.mp4?tr=f-jpg,w-400,h-600,so-1", 
-    url: "https://ik.imagekit.io/luminexsocial/Short%20Form/Strategy%20For%20LinkedIn%20Growth%20V1.mp4", 
+    thumbnail: "https://img.youtube.com/vi/1KTLmD7okxY/maxresdefault.jpg", 
+    url: "https://www.youtube.com/embed/1KTLmD7okxY", 
     tags: ["Shorts", "Edit"] 
   },
   { 
     id: 4, 
-    title: "SubMagic", 
+    title: "Short 4", 
     duration: "0:30", 
     views: "", 
     category: "Short Form", 
     client: "Luminex", 
-    thumbnail: "https://ik.imagekit.io/luminexsocial/Short%20Form/SubMagic%20V3.mp4?tr=f-jpg,w-400,h-600,so-1", 
-    url: "https://ik.imagekit.io/luminexsocial/Short%20Form/SubMagic%20V3.mp4", 
+    thumbnail: "https://img.youtube.com/vi/8CMyACDvgiw/maxresdefault.jpg", 
+    url: "https://www.youtube.com/embed/8CMyACDvgiw", 
     tags: ["Shorts", "Motion"] 
   },
   { 
     id: 5, 
-    title: "Pinikio", 
+    title: "Short 5", 
     duration: "0:30", 
     views: "", 
     category: "Short Form", 
     client: "Luminex", 
-    thumbnail: "https://ik.imagekit.io/luminexsocial/Short%20Form/Pinikio%20V2.mp4?tr=f-jpg,w-400,h-600,so-1", 
-    url: "https://ik.imagekit.io/luminexsocial/Short%20Form/Pinikio%20V2.mp4", 
+    thumbnail: "https://img.youtube.com/vi/1zwTqSBPJYI/maxresdefault.jpg", 
+    url: "https://www.youtube.com/embed/1zwTqSBPJYI", 
     tags: ["Shorts", "Visuals"] 
   },
   { 
     id: 6, 
-    title: "Marketing", 
+    title: "Short 6", 
     duration: "0:30", 
     views: "", 
     category: "Short Form", 
     client: "Luminex", 
-    thumbnail: "https://ik.imagekit.io/luminexsocial/Short%20Form/Marketing%20V2.mp4?tr=f-jpg,w-400,h-600,so-1", 
-    url: "https://ik.imagekit.io/luminexsocial/Short%20Form/Marketing%20V2.mp4", 
+    thumbnail: "https://img.youtube.com/vi/ayAjLHOl-MQ/maxresdefault.jpg", 
+    url: "https://www.youtube.com/embed/ayAjLHOl-MQ", 
     tags: ["Shorts", "Story"] 
   },
   // Long Form
   { 
     id: 9, 
-    title: "Pre Call Video", 
+    title: "Long Form 1", 
     duration: "5:00", 
     views: "", 
     category: "Long Form", 
     client: "Luminex", 
-    thumbnail: "https://ik.imagekit.io/luminexsocial/Long%20form/Pre%20Call%20Video%20V2.mp4?tr=f-jpg,w-800,h-450,so-1", 
-    url: "https://ik.imagekit.io/luminexsocial/Long%20form/Pre%20Call%20Video%20V2.mp4", 
+    thumbnail: "https://images.unsplash.com/photo-1492691527719-9d1e07eab495?w=800&q=80", 
+    url: "https://www.youtube.com/embed/dQw4w9WgXcQ", 
     tags: ["Storytelling", "Cinematic"] 
   },
   { 
     id: 10, 
-    title: "Intro", 
+    title: "Long Form 2", 
     duration: "8:00", 
     views: "", 
     category: "Long Form", 
     client: "Luminex", 
-    thumbnail: "https://ik.imagekit.io/luminexsocial/Long%20form/Intro.mp4?tr=f-jpg,w-800,h-450,so-1", 
-    url: "https://ik.imagekit.io/luminexsocial/Long%20form/Intro.mp4", 
+    thumbnail: "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=800&q=80", 
+    url: "https://www.youtube.com/embed/dQw4w9WgXcQ", 
     tags: ["Production", "Edit"] 
   },
   { 
     id: 11, 
-    title: "Summer Arc", 
+    title: "Long Form 3", 
     duration: "10:00", 
     views: "", 
     category: "Long Form", 
     client: "Luminex", 
-    thumbnail: "https://ik.imagekit.io/luminexsocial/Long%20form/start%20your%20summer%20arc%20in%203%20minutes%20%20%20OnPointFresh%201080p,%20h264.mp4?tr=f-jpg,w-800,h-450,so-1", 
-    url: "https://ik.imagekit.io/luminexsocial/Long%20form/start%20your%20summer%20arc%20in%203%20minutes%20%20%20OnPointFresh%201080p,%20h264.mp4", 
+    thumbnail: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&q=80", 
+    url: "https://www.youtube.com/embed/dQw4w9WgXcQ", 
     tags: ["Creative", "VFX"] 
   },
   { 
     id: 12, 
-    title: "Precision Closer", 
+    title: "Long Form 4", 
     duration: "12:00", 
     views: "", 
     category: "Long Form", 
     client: "Luminex", 
-    thumbnail: "https://ik.imagekit.io/luminexsocial/Long%20form/Precision%20Closer.mp4?tr=f-jpg,w-800,h-450,so-1", 
-    url: "https://ik.imagekit.io/luminexsocial/Long%20form/Precision%20Closer.mp4", 
+    thumbnail: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&q=80", 
+    url: "https://www.youtube.com/embed/dQw4w9WgXcQ", 
     tags: ["Branding", "Motion"] 
   },
 ];
@@ -376,7 +376,6 @@ const VideoPortfolioSection = () => {
                       src={video.thumbnail}
                       alt={video.title}
                       className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                      crossOrigin="anonymous"
                     />
                     {/* Play Button Overlay */}
                     <motion.div
@@ -418,17 +417,13 @@ const VideoPortfolioSection = () => {
             </DialogTitle>
             {selectedVideo && (
               <div className="relative aspect-video bg-black flex items-center justify-center">
-                <video
-                  key={selectedVideo.url}
-                  className="w-full h-full max-h-[80vh]"
-                  controls
-                  autoPlay
-                  playsInline
-                  crossOrigin="anonymous"
-                >
-                  <source src={selectedVideo.url} type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
+                <iframe
+                  src={`${selectedVideo.url}?autoplay=1&rel=0&modestbranding=1`}
+                  title={selectedVideo.title}
+                  className="w-full h-full border-0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                ></iframe>
               </div>
             )}
           </DialogContent>
