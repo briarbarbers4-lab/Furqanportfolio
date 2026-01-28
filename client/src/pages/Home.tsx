@@ -423,6 +423,7 @@ const VideoPortfolioSection = () => {
                   controls
                   autoPlay
                   playsInline
+                  crossOrigin="anonymous"
                 >
                   <source src={selectedVideo.url} type="video/mp4" />
                   Your browser does not support the video tag.
